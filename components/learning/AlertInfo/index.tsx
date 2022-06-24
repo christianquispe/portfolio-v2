@@ -1,15 +1,11 @@
 import { Text } from "@nextui-org/react";
 
-import { MainLayout } from "../components/layouts";
-
-import { NextPageWithLayout } from "./_app";
-
-const Home: NextPageWithLayout = () => {
+export const AlertInfo: React.FC = ({}) => {
   return (
-    <>
+    <blockquote style={{ margin: 0 }}>
       <Text
-        h1
-        size={30}
+        h5
+        size={20}
         css={{
           textGradient: "45deg, $blue600 -20%, $pink600 50%",
         }}
@@ -18,7 +14,7 @@ const Home: NextPageWithLayout = () => {
         Acerca de la sección
       </Text>
       <Text>
-        Todo el contenido que pienso ingresar en esta sección será información
+        Todo el contenido que pienso llenar en esta sección será información
         útil que le sirva a mi hermano en su aprendizaje como desarrollador.
         Quizá también me sirva a mi para tomar apuntes de mis propias
         investigaciones y documentarlos aquí.
@@ -26,21 +22,10 @@ const Home: NextPageWithLayout = () => {
       <Text>
         En cualquiera de la casos, quería advertir a los lectures (si es que
         alguien visita estas páginas) que lo redactado en los párrafos a
-        continuación está expuesto a contener fallas, de ser el caso y contar
+        continuación está expuesto a contener errores, de ser el caso y contar
         con mejor información sientase libre de generar un <code>issue</code> o
         en el mejor de los casos un <code>pull request</code>.
       </Text>
-    </>
+    </blockquote>
   );
 };
-
-Home.getLayout = (page) => (
-  <MainLayout
-    title="Christian Blog"
-    description="Escribo este diarion para que mi hermano aprenda a desarrollar"
-  >
-    {page}
-  </MainLayout>
-);
-
-export default Home;

@@ -13,3 +13,9 @@ export const NavbarStyled = styled("nav", {
     },
   },
 });
+
+export const NavListWrraper = styled("ul", {
+  d: "flex",
+  ai: "center",
+  gap: "$4",
+});

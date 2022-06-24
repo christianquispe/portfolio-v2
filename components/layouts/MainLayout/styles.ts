@@ -5,10 +5,10 @@ export const WrapperStyled = styled("header", {
   zIndex: "1",
   d: "flex",
   fd: "column",
-  height: "100vh",
+  minHeight: "100vh",
   footer: {
     mt: "auto",
-    height: "60px",
+    height: "80px",
     dflex: "center",
   },
   main: {
@@ -46,5 +46,5 @@ export const WrapperStyled = styled("header", {
 });
 
 export const HeaderStyled = styled("header", {
-  backgroundColor: "$gray100",
+  // backgroundColor: "$gray100",
 });

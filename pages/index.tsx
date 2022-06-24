@@ -14,15 +14,15 @@ const Home: NextPageWithLayout = () => {
       }}
       weight="bold"
     >
-      Para Johan
+      Sobre mi
     </Text>
   );
 };
 
 Home.getLayout = (page) => (
   <MainLayout
-    title="Christian Blog"
-    description="Escribo este diarion para que mi hermano aprenda a desarrollar"
+    title="Christian Quispe"
+    description="Hola soy Christian Quispe, y esta es mi web. Aquí estará mi información laboral y algunos datos extra."
   >
     {page}
   </MainLayout>
