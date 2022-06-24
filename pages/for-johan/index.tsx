@@ -1,24 +1,48 @@
+import { GetStaticProps } from "next";
+
 import { MainLayout } from "../../components/layouts";
 import { AlertInfo, LenguageSection } from "../../components/learning";
 
+import { getAllFilesMetadata } from "../../lib/mdx";
+
+import { orderByDate } from "../../utils/functions";
+
 import { NextPageWithLayout } from "../_app";
 
-const Home: NextPageWithLayout = () => {
+interface HomeProps {
+  posts: any[];
+}
+
+const Home: NextPageWithLayout<HomeProps> = ({ posts }) => {
   return (
     <>
       <AlertInfo />
-      <LenguageSection />
+      <LenguageSection posts={posts} />
     </>
   );
 };
 
 Home.getLayout = (page) => (
   <MainLayout
-    title="Blog - Christian Quispe"
-    description="Escribo este diarion para que mi hermano aprenda a desarrollar"
+    metadata={{
+      title: "Blog - Christian Quispe",
+      description:
+        "Escribo este blog para que mi hermano aprenda a desarrollar",
+    }}
   >
     {page}
   </MainLayout>
 );
+
+export const getStaticProps: GetStaticProps = async () => {
+  const unorderedPosts = await getAllFilesMetadata();
+  const posts = unorderedPosts.sort(orderByDate);
+
+  return {
+    props: {
+      posts,
+    },
+  };
+};
 
 export default Home;

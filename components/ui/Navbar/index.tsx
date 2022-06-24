@@ -25,8 +25,6 @@ const navItems: NavItem[] = [
 export const Navbar: React.FC = () => {
   const { pathname } = useRouter();
 
-  console.log(pathname);
-
   return (
     <NavbarStyled>
       <Image

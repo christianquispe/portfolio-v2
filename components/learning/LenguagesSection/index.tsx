@@ -4,7 +4,11 @@ import { LenguageCard } from "../LenguageCard";
 
 import { SectionLenguagesStyled } from "./styles";
 
-export const LenguageSection: React.FC = ({}) => {
+interface LenguageProps {
+  posts: any[];
+}
+
+export const LenguageSection: React.FC<LenguageProps> = ({ posts }) => {
   return (
     <SectionLenguagesStyled>
       <Text
@@ -24,30 +28,17 @@ export const LenguageSection: React.FC = ({}) => {
         </Text>
       </Text>
       <Grid.Container gap={2} justify="center">
-        <Grid xs={12} sm={6} lg={4}>
-          <LenguageCard
-            title="HTML5"
-            extension=".html"
-            description="Es el lenguaje de marcado, con él podemos estructurar todas nuestras webs. Tiene un valor semántico con el que le decimos a los navegadores qué es cada elemento."
-            imgSrc="/html-icon.png"
-          />
-        </Grid>
-        <Grid xs={12} sm={6} lg={4}>
-          <LenguageCard
-            title="CSS3"
-            extension=".css"
-            description="Es un lenguaje que maneja el diseño y presentación de las páginas web. Funciona junto con el lenguaje HTML que se encarga del contenido básico de las páginas."
-            imgSrc="/css-icon.png"
-          />
-        </Grid>
-        <Grid xs={12} sm={6} lg={4}>
-          <LenguageCard
-            title="Javascript"
-            extension=".js"
-            description="A diferencia de HTML, y CSS, Javascript es una lenguaje de programación que funciona en los navegadores de forma nativa (lenguaje interpretado sin necesidad de compilación)."
-            imgSrc="/html-icon.png"
-          />
-        </Grid>
+        {posts.map((post) => (
+          <Grid key={post.title} xs={12} sm={6} lg={4}>
+            <LenguageCard
+              title={post.title}
+              extension={post.extensionFile}
+              description={post.description}
+              imgSrc={post.icon}
+              slug={post.slug}
+            />
+          </Grid>
+        ))}
       </Grid.Container>
     </SectionLenguagesStyled>
   );

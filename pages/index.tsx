@@ -21,8 +21,11 @@ const Home: NextPageWithLayout = () => {
 
 Home.getLayout = (page) => (
   <MainLayout
-    title="Christian Quispe"
-    description="Hola soy Christian Quispe, y esta es mi web. Aquí estará mi información laboral y algunos datos extra."
+    metadata={{
+      title: "Christian Quispe",
+      description:
+        "Hola soy Christian Quispe, y esta es mi web. Aquí estará mi información laboral y algunos datos extra.",
+    }}
   >
     {page}
   </MainLayout>

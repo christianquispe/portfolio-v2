@@ -3,26 +3,23 @@ import { Container, Text, Link } from "@nextui-org/react";
 
 import { Navbar } from "../../ui";
 
+import { Metadata } from "../../../interfaces/seo";
+
 import { HeaderStyled, WrapperStyled } from "./styles";
+import { OpenGraph } from "../../seo";
 
 interface MainLayoutProps {
-  title: string;
-  description: string;
+  metadata: Metadata;
   children: React.ReactNode;
 }
 
 export const MainLayout: React.FC<MainLayoutProps> = ({
-  title,
-  description,
+  metadata,
   children,
 }) => {
   return (
     <WrapperStyled>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <link rel="icon" href="/logo-transparente-blanco.png" />
-      </Head>
+      <OpenGraph metadata={metadata} />
 
       <HeaderStyled>
         <Container lg>

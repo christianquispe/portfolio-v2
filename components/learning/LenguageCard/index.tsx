@@ -1,5 +1,6 @@
-import { Card, Grid, Text } from "@nextui-org/react";
+import { useRouter } from "next/router";
 import Image from "next/image";
+import { Card, Grid, Text } from "@nextui-org/react";
 
 import { ImgWrapper } from "./styles";
 
@@ -8,6 +9,7 @@ interface LenguageCardProps {
   description: string;
   imgSrc: string;
   extension: string;
+  slug: string;
 }
 
 export const LenguageCard: React.FC<LenguageCardProps> = ({
@@ -15,9 +17,18 @@ export const LenguageCard: React.FC<LenguageCardProps> = ({
   description,
   imgSrc,
   extension,
+  slug,
 }) => {
+  const router = useRouter();
+
   return (
-    <Card css={{ p: "$6" }}>
+    <Card
+      onClick={() => router.push(`/for-johan/lenguages/${slug}`)}
+      css={{ p: "$6" }}
+      disableRipple={false}
+      isHoverable
+      isPressable
+    >
       <Card.Header>
         <ImgWrapper>
           <Image alt={title} src={imgSrc || ""} width="34px" height="34px" />

@@ -6,7 +6,7 @@ import { darkTheme } from "../themes";
 
 import "../styles/globals.css";
 
-export type NextPageWithLayout = NextPage & {
+export type NextPageWithLayout<T = {}> = NextPage<T> & {
   getLayout?: (page: JSX.Element) => JSX.Element;
 };
 
