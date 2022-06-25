@@ -5,6 +5,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import { darkTheme } from "../themes";
 
 import "../styles/globals.css";
+import "../styles/dracula-prism.css";
 
 export type NextPageWithLayout<T = {}> = NextPage<T> & {
   getLayout?: (page: JSX.Element) => JSX.Element;

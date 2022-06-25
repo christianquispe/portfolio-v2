@@ -46,7 +46,14 @@ export const Navbar: React.FC = () => {
         {navItems.map((item) => (
           <li key={item.path}>
             <NextLink href={item.path} passHref>
-              <Link color={item.path === pathname ? "secondary" : "text"}>
+              <Link
+                color={
+                  item.path === pathname ||
+                  pathname.split("/")[1] === item.path.replace("/", "")
+                    ? "secondary"
+                    : "text"
+                }
+              >
                 {item.name}
               </Link>
             </NextLink>
