@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN;CHARSET=UTF-8:Christian Quispe Camasca
+N;CHARSET=UTF-8:Quispe Camasca;Christian;;;
+EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:christianquispecamasca@gmail.com
+TEL;TYPE=CELL:952350324
+TITLE;CHARSET=UTF-8:Front End Developer
+ORG;CHARSET=UTF-8:Equip Industry
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/christian-quispe-camasca-171266192/
+X-SOCIALPROFILE;TYPE=Github:https://github.com/christianquispe
+REV:2022-06-25T03:16:02.706Z
+END:VCARD

@@ -37,6 +37,11 @@ export const OpenGraph: React.FC<OpenGraphProps> = ({ metadata }) => {
       <meta name="twitter:description" content={SEO.description} />
       <meta name="twitter:image" content={SEO.image} />
       <meta property="article:published_time" content={SEO.date} />
+      <link
+        rel="shortcut icon"
+        href="/logo-transparente-blanco.png"
+        type="image/x-icon"
+      />
     </Head>
   );
 };

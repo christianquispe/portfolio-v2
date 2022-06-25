@@ -1,8 +1,9 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 import NextLink from "next/link";
-
 import { Text, Spacer, Link } from "@nextui-org/react";
+
+import { VCardModal } from "../../me";
 
 import { NavbarStyled, NavListWrraper } from "./styles";
 
@@ -59,6 +60,9 @@ export const Navbar: React.FC = () => {
             </NextLink>
           </li>
         ))}
+        <li>
+          <VCardModal src="/christian-vcard.png" />
+        </li>
       </NavListWrraper>
     </NavbarStyled>
   );
