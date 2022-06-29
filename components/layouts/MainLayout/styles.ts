@@ -1,6 +1,6 @@
 import { styled } from "@nextui-org/react";
 
-export const WrapperStyled = styled("header", {
+export const WrapperStyled = styled("div", {
   position: "relative",
   zIndex: "1",
   d: "flex",
@@ -10,9 +10,6 @@ export const WrapperStyled = styled("header", {
     mt: "auto",
     height: "80px",
     dflex: "center",
-  },
-  main: {
-    py: "$15",
   },
   "&::before, &::after": {
     content: "",
@@ -46,5 +43,8 @@ export const WrapperStyled = styled("header", {
 });
 
 export const HeaderStyled = styled("header", {
-  // backgroundColor: "$gray100",
+  bgBlur: "#000000DD",
+  position: "sticky",
+  top: "$0",
+  zIndex: "$1"
 });

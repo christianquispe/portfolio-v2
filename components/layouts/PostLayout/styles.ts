@@ -11,9 +11,6 @@ export const WrapperStyled = styled("header", {
     height: "80px",
     dflex: "center",
   },
-  main: {
-    py: "$15",
-  },
   "&::before, &::after": {
     content: "",
     position: "fixed",

@@ -23,7 +23,7 @@ export const LenguageCard: React.FC<LenguageCardProps> = ({
 
   return (
     <Card
-      onClick={() => router.push(`/for-johan/lenguages/${slug}`)}
+      onClick={() => router.push(`/blog/lenguages/${slug}`)}
       css={{ p: "$6" }}
       disableRipple={false}
       isHoverable

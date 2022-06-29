@@ -1,7 +1,16 @@
 import Image from "next/image";
-import { Button, Modal, useModal, Text, Grid, Table } from "@nextui-org/react";
+import {
+  Button,
+  Modal,
+  useModal,
+  Text,
+  Grid,
+  Spacer,
+  Link,
+} from "@nextui-org/react";
 
-import { useDialog } from "../../../hooks/useDialog";
+import { Icon } from "../../ui";
+import { IconsId } from "../../../interfaces/components";
 
 interface VCardProps {
   src: string;
@@ -28,39 +37,39 @@ export const VCardModal: React.FC<VCardProps> = ({ src }) => {
                 alt="Christian Quispe vCard"
               />
             </Grid>
-            <Grid md={12}>
-              <Table
-                compact
-                aria-label="Example static compact collection table"
-                css={{
-                  height: "auto",
-                  minWidth: "100%",
-                }}
-              >
-                <Table.Header>
-                  <Table.Column>Dato</Table.Column>
-                  <Table.Column>Valor</Table.Column>
-                </Table.Header>
-                <Table.Body>
-                  <Table.Row key="1">
-                    <Table.Cell>Nombre</Table.Cell>
-                    <Table.Cell>Christian Quispe</Table.Cell>
-                  </Table.Row>
-                  <Table.Row key="2">
-                    <Table.Cell>Posición</Table.Cell>
-                    <Table.Cell>Programador Front End</Table.Cell>
-                  </Table.Row>
-                  <Table.Row key="3">
-                    <Table.Cell>Email</Table.Cell>
-                    <Table.Cell>christianquispecamasca@gmail.com</Table.Cell>
-                  </Table.Row>
-                </Table.Body>
-              </Table>
+            <Grid md={12} css={{ pt: "$4" }}>
+              <div>
+                <Text b>Christian Quispe - Programador Front End</Text>
+                <Text>christianquispecamasca@gmail.com</Text>
+                <Spacer />
+                <Grid.Container justify="center">
+                  <Link
+                    href="https://www.linkedin.com/in/christian-quispe-camasca-171266192/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Button size="xs" light auto>
+                      <Icon id={IconsId.LinkedIn} size={20} filled />
+                    </Button>
+                  </Link>
+                  <Link
+                    href="https://github.com/christianquispe"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Button size="xs" light auto>
+                      <Icon id={IconsId.GitHub} size={20} filled />
+                    </Button>
+                  </Link>
+                </Grid.Container>
+              </div>
             </Grid>
           </Grid.Container>
         </Modal.Body>
       </Modal>
-      <Button onClick={() => setVisible(true)}>Code</Button>
+      <Button size="xs" light auto onClick={() => setVisible(true)}>
+        <Icon id={IconsId.QR} size={20} filled />
+      </Button>
     </>
   );
 };

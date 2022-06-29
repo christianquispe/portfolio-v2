@@ -3,9 +3,10 @@ import Image from "next/image";
 import NextLink from "next/link";
 import { Text, Spacer, Link } from "@nextui-org/react";
 
-import { VCardModal } from "../../me";
+import { BurgerBtn } from "../BurgerBtn/index";
 
 import { NavbarStyled, NavListWrraper } from "./styles";
+import { useDialog } from "../../../hooks/useDialog";
 
 interface NavItem {
   path: string;
@@ -18,13 +19,15 @@ const navItems: NavItem[] = [
     path: "/",
   },
   {
-    name: "Para Johan",
-    path: "/for-johan",
+    name: "Blog",
+    path: "/blog",
   },
 ];
 
 export const Navbar: React.FC = () => {
   const { pathname } = useRouter();
+
+  const { open, handleClose, handleOpen } = useDialog();
 
   return (
     <NavbarStyled>
@@ -36,14 +39,22 @@ export const Navbar: React.FC = () => {
       />
       <NextLink href="/" passHref>
         <Link>
-          <Text h2 weight="bold">
+          <Text
+            weight="bold"
+            css={{
+              fontSize: "$xl2",
+              "@md": {
+                fontSize: "$xl4",
+              },
+            }}
+          >
             Christian Quispe
           </Text>
         </Link>
       </NextLink>
 
       <Spacer css={{ flex: 1 }} />
-      <NavListWrraper>
+      <NavListWrraper className={open ? "open" : ""}>
         {navItems.map((item) => (
           <li key={item.path}>
             <NextLink href={item.path} passHref>
@@ -60,10 +71,8 @@ export const Navbar: React.FC = () => {
             </NextLink>
           </li>
         ))}
-        <li>
-          <VCardModal src="/christian-vcard.png" />
-        </li>
       </NavListWrraper>
+      <BurgerBtn active={open} onClose={handleClose} onOpen={handleOpen} />
     </NavbarStyled>
   );
 };
