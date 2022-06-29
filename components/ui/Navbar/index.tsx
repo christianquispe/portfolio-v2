@@ -7,6 +7,7 @@ import { BurgerBtn } from "../BurgerBtn/index";
 
 import { NavbarStyled, NavListWrraper } from "./styles";
 import { useDialog } from "../../../hooks/useDialog";
+import { useEffect } from "react";
 
 interface NavItem {
   path: string;
@@ -25,9 +26,18 @@ const navItems: NavItem[] = [
 ];
 
 export const Navbar: React.FC = () => {
-  const { pathname } = useRouter();
+  const { pathname, events } = useRouter();
 
   const { open, handleClose, handleOpen } = useDialog();
+
+  useEffect(() => {
+    // subscribe to next/router event
+    events.on("routeChangeStart", handleClose);
+    return () => {
+      // unsubscribe to event on unmount to prevent memory leak
+      events.off("routeChangeStart", handleClose);
+    };
+  }, [handleClose, events]);
 
   return (
     <NavbarStyled>
@@ -57,7 +67,10 @@ export const Navbar: React.FC = () => {
       <NavListWrraper className={open ? "open" : ""}>
         {navItems.map((item) => (
           <li key={item.path}>
-            <NextLink href={item.path} passHref>
+            <NextLink
+              href={item.path}
+              passHref
+            >
               <Link
                 color={
                   item.path === pathname ||
