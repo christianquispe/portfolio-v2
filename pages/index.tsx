@@ -1,29 +1,13 @@
-import Image from "next/image";
-import { Text } from "@nextui-org/react";
-
 import { MainLayout } from "../components/layouts";
+import { Banner } from "../components/me";
 
 import { NextPageWithLayout } from "./_app";
+import { Icon } from "../components/ui";
 
 const Home: NextPageWithLayout = () => {
   return (
     <>
-      <Text
-        h1
-        size={30}
-        css={{
-          textGradient: "45deg, $blue600 -20%, $pink600 50%",
-        }}
-        weight="bold"
-      >
-        Sobre mi
-      </Text>
-      <Image
-        height={500}
-        width={500}
-        src="/christian-vcard.png"
-        alt="Christian Quispe vCard"
-      />
+      <Banner />
     </>
   );
 };

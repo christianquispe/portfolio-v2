@@ -20,7 +20,12 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>{CssBaseline.flush()}</Head>
+        <Head>
+          {CssBaseline.flush()}
+          {/* Vamos a precargar el archivo donde tenemos almancenados nuestros iconos */}
+          {/* Aquí el blog donde saco la razón https://benadam.me/thoughts/react-svg-sprites/ */}
+          {/* <link rel="preload" as="image/svg+xml" href="sprite.svg"></link> */}
+        </Head>
         <body>
           <Main />
           <NextScript />
