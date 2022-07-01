@@ -10,7 +10,7 @@ export const Banner: React.FC = ({}) => {
             <Text
               h1
               css={{
-                fontSize: "$xl6",
+                fontSize: "$xl5",
                 "@md": {
                   fontSize: "$xl8",
                 },
@@ -22,7 +22,10 @@ export const Banner: React.FC = ({}) => {
               h2
               css={{
                 textGradient: "45deg, $blue600 -20%, $pink600 50%",
-                fontSize: "$xl4",
+                fontSize: "$xl3",
+                "@md": {
+                  fontSize: "$xl4"
+                }
               }}
             >
               Front End Developer

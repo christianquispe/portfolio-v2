@@ -7,5 +7,5 @@ export const BannerStyled = styled("section", {
   fd: "column",
   jc: "center",
   gap: "40px",
-  height: "calc(100vh - 120px)",
+  minHeight: "calc(100vh - 120px)",
 });
