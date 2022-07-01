@@ -1,13 +1,13 @@
-import Head from "next/head";
-import { Container, Text, Link, Grid } from "@nextui-org/react";
+import { Container, Text, Link } from "@nextui-org/react";
 
-import { Aside, Navbar } from "../../ui";
+import { Aside } from "../../ui";
 
 import { Metadata } from "../../../interfaces/seo";
 
 import { OpenGraph } from "../../seo";
 
-import { HeaderStyled, WrapperStyled } from "./styles";
+import { PostGrid, WrapperStyled } from "./styles";
+import { Header } from "../../ui/Header";
 
 interface PostLayoutProps {
   metadata: Metadata;
@@ -22,22 +22,14 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
     <WrapperStyled>
       <OpenGraph metadata={metadata} />
 
-      <HeaderStyled>
-        <Container lg>
-          <Navbar />
-        </Container>
-      </HeaderStyled>
+      <Header />
 
       <main>
         <Container lg>
-          <Grid.Container gap={2}>
-            <Grid md={8}>
-              <div>{children}</div>
-            </Grid>
-            <Grid md={4}>
-              <Aside />
-            </Grid>
-          </Grid.Container>
+          <PostGrid>
+            <div>{children}</div>
+            <Aside />
+          </PostGrid>
         </Container>
       </main>
 

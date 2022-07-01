@@ -42,6 +42,13 @@ export const WrapperStyled = styled("header", {
   },
 });
 
-export const HeaderStyled = styled("header", {
-  // backgroundColor: "$gray100",
+export const PostGrid = styled("div", {
+  paddingTop: "$10",
+  width: "100%",
+  "@md": {
+    gridTemplateColumns: "1fr auto",
+    d: "grid",
+    gap: "$10",
+    paddingTop: "$15",
+  },
 });

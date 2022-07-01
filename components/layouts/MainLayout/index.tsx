@@ -1,12 +1,10 @@
-import Head from "next/head";
 import { Container, Text, Link } from "@nextui-org/react";
-
-import { Navbar } from "../../ui";
 
 import { Metadata } from "../../../interfaces/seo";
 
-import { HeaderStyled, WrapperStyled } from "./styles";
+import { WrapperStyled } from "./styles";
 import { OpenGraph } from "../../seo";
+import { Header } from "../../ui/Header";
 
 interface MainLayoutProps {
   metadata: Metadata;
@@ -21,11 +19,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
     <WrapperStyled>
       <OpenGraph metadata={metadata} />
 
-      <HeaderStyled>
-        <Container lg>
-          <Navbar />
-        </Container>
-      </HeaderStyled>
+      <Header />
 
       <main>
         <Container lg>{children}</Container>
