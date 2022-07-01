@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote } from "next-mdx-remote";
 
 import { PostLayout } from "../../../components/layouts";
+import { MDXComponents } from "../../../components/ui";
 
 import { getFiles, getFileBySlug } from "../../../lib/mdx";
 
@@ -13,7 +14,7 @@ interface LenguagePageProps {
 const LenguagePage: React.FC<LenguagePageProps> = ({ frontmatter, source }) => {
   return (
     <PostLayout metadata={frontmatter}>
-      <MDXRemote {...source} />
+      <MDXRemote {...source} components={MDXComponents} />
     </PostLayout>
   );
 };
