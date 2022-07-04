@@ -7,9 +7,6 @@ const Home: NextPageWithLayout = () => {
   return (
     <>
       <Banner />
-      <Banner />
-      <Banner />
-      <Banner />
     </>
   );
 };
