@@ -2,11 +2,13 @@ import { MainLayout } from "../components/layouts";
 import { Banner } from "../components/me";
 
 import { NextPageWithLayout } from "./_app";
-import { Icon } from "../components/ui";
 
 const Home: NextPageWithLayout = () => {
   return (
     <>
+      <Banner />
+      <Banner />
+      <Banner />
       <Banner />
     </>
   );

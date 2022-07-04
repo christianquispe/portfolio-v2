@@ -33,7 +33,7 @@ export const WrapperStyled = styled("div", {
     width: "30rem",
     height: "30rem",
     bottom: "20%",
-    top: "10%",
+    top: "-10%",
     right: "10%",
     bg: "$purple300",
     filter: "blur(90px)",

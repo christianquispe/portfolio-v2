@@ -1,14 +1,41 @@
-import { Container } from "@nextui-org/react";
+import { Container, VariantProps } from "@nextui-org/react";
+import { useEffect, useState } from "react";
 
 import { Navbar } from "../Navbar";
 
-import { HeaderStyled } from "./styles";
+import { StitchesHeader } from "./styles";
 
-interface HeaderProps {}
+interface HeaderStyledProps extends VariantProps<typeof StitchesHeader> {
+  detached: boolean;
+  children: React.ReactNode;
+}
 
-export const Header: React.FC<HeaderProps> = ({}) => {
+const HeaderStyled: React.FC<HeaderStyledProps> = ({ children, ...rest }) => (
+  <StitchesHeader {...rest}>{children}</StitchesHeader>
+);
+
+export const Header: React.FC = ({}) => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    setScrollPosition(
+      (typeof window !== "undefined" && window.pageYOffset) || 0
+    );
+    const onScroll = () => {
+      requestAnimationFrame(() => {
+        setScrollPosition(window.pageYOffset);
+      });
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  const detached = scrollPosition > 30;
+
   return (
-    <HeaderStyled>
+    <HeaderStyled detached={detached}>
       <Container lg>
         <Navbar />
       </Container>
