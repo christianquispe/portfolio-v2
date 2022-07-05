@@ -1,13 +1,15 @@
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import NextLink from "next/link";
 import { Text, Spacer, Link } from "@nextui-org/react";
 
+import { useDialog } from "../../../hooks/useDialog";
+
 import { BurgerBtn } from "../BurgerBtn/index";
+import { VCardModal } from "../../me";
 
 import { NavbarStyled, NavListWrraper } from "./styles";
-import { useDialog } from "../../../hooks/useDialog";
-import { useEffect } from "react";
 
 interface NavItem {
   path: string;
@@ -84,6 +86,7 @@ export const Navbar: React.FC = () => {
           </li>
         ))}
       </NavListWrraper>
+      <VCardModal src="/christian-vcard.svg" />
       <BurgerBtn active={open} onClose={handleClose} onOpen={handleOpen} />
     </NavbarStyled>
   );

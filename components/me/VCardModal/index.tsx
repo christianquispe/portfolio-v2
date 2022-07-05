@@ -67,7 +67,13 @@ export const VCardModal: React.FC<VCardProps> = ({ src }) => {
           </Grid.Container>
         </Modal.Body>
       </Modal>
-      <Button size="xs" light auto onClick={() => setVisible(true)}>
+      <Button
+        size="xs"
+        light
+        auto
+        onClick={() => setVisible(true)}
+        aria-label="show qr"
+      >
         <Icon id={IconsId.QR} size={20} filled />
       </Button>
     </>

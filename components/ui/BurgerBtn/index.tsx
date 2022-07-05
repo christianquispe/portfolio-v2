@@ -1,4 +1,3 @@
-import { VCardModal } from "../../me";
 import { BurgerBtnStyled } from "./styles";
 
 interface BurgerBtnProps {
@@ -14,7 +13,6 @@ export const BurgerBtn: React.FC<BurgerBtnProps> = ({
 }) => {
   return (
     <>
-      <VCardModal src="/christian-vcard.svg" />
       <BurgerBtnStyled
         className={`${active ? "closable" : ""}`}
         onClick={() => (active ? onClose() : onOpen())}
