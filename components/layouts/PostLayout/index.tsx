@@ -1,13 +1,11 @@
 import { Container, Text, Link } from "@nextui-org/react";
 
-import { Aside } from "../../ui";
+import { Aside, Header } from "@components/ui";
+import { OpenGraph } from "@components/seo";
 
-import { Metadata } from "../../../interfaces/seo";
-
-import { OpenGraph } from "../../seo";
+import { Metadata } from "@interfaces";
 
 import { PostGrid, WrapperStyled } from "./styles";
-import { Header } from "../../ui/Header";
 
 interface PostLayoutProps {
   metadata: Metadata;

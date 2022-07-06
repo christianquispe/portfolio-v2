@@ -1,4 +1,5 @@
 import { Text, Grid, Card, Row, Button } from "@nextui-org/react";
+
 import { BannerStyled } from "./styles";
 
 export const Banner: React.FC = ({}) => {

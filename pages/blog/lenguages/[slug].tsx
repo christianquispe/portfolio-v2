@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote } from "next-mdx-remote";
 
-import { PostLayout } from "../../../components/layouts";
-import { MDXComponents } from "../../../components/ui";
+import { getFiles, getFileBySlug } from "@lib/mdx";
 
-import { getFiles, getFileBySlug } from "../../../lib/mdx";
+import { PostLayout } from "@components/layouts";
+import { MDXComponents } from "@components/ui";
 
 interface LenguagePageProps {
   frontmatter: any;

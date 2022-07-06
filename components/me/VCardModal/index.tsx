@@ -9,8 +9,9 @@ import {
   Link,
 } from "@nextui-org/react";
 
-import { Icon } from "../../ui";
-import { IconsId } from "../../../interfaces/components";
+import { Icon } from "@components/ui";
+
+import { IconsId } from "@interfaces";
 
 interface VCardProps {
   src: string;

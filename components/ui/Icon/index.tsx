@@ -1,4 +1,4 @@
-import { IconsId } from "../../../interfaces/components";
+import { IconsId } from "@interfaces";
 
 export interface IconProps extends React.SVGProps<SVGSVGElement> {
   id: IconsId;

@@ -1,10 +1,11 @@
 import { Container, Text, Link } from "@nextui-org/react";
 
-import { Metadata } from "../../../interfaces/seo";
+import { Metadata } from "@interfaces";
+
+import { OpenGraph } from "@components/seo";
+import { Header } from "@components/ui";
 
 import { WrapperStyled } from "./styles";
-import { OpenGraph } from "../../seo";
-import { Header } from "../../ui/Header";
 
 interface MainLayoutProps {
   metadata: Metadata;

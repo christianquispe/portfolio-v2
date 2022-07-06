@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Metadata } from "../../interfaces/seo";
+import { Metadata } from "@interfaces";
 
 interface OpenGraphProps {
   metadata: Metadata;

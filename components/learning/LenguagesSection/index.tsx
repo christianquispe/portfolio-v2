@@ -1,6 +1,6 @@
 import { Grid, Text } from "@nextui-org/react";
 
-import { LenguageCard } from "../LenguageCard";
+import { LenguageCard } from "@components/learning";
 
 import { SectionLenguagesStyled } from "./styles";
 

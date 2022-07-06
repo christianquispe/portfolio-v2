@@ -1,7 +1,7 @@
 import { Container, VariantProps } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 
-import { Navbar } from "../Navbar";
+import { Navbar } from "@components/ui";
 
 import { StitchesHeader } from "./styles";
 

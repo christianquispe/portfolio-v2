@@ -24,6 +24,9 @@ beforeEach(() => {
 
 describe("Navigation", () => {
   it("renders navigation list", async () => {
+    const [aboutMe, blog] = await screen.findAllByRole("listitem")
     expect(await screen.findAllByRole("listitem")).toHaveLength(2);
+    expect(aboutMe.textContent).toBe('Sobre mi')
+    expect(blog.textContent).toBe('Blog')
   });
 });
