@@ -1,8 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import { MainLayout } from "../components/layouts";
-import Home from "../pages/index";
+import { Navbar } from "../../../components/ui";
 
 beforeEach(() => {
+  // Para Mockear el hook useRouter
+  // https://stackoverflow.com/questions/69125633/mocking-nextjs-router-events-with-jest
   const useRouter = jest.spyOn(require("next/router"), "useRouter");
 
   useRouter.mockImplementation(() => ({
@@ -18,20 +19,11 @@ beforeEach(() => {
     beforePopState: jest.fn(() => null),
     prefetch: jest.fn(() => null),
   }));
-
-  render(
-    <MainLayout metadata={{ title: "Christian Test" }}>
-      <Home />
-    </MainLayout>
-  );
+  render(<Navbar />);
 });
 
-describe("Home", () => {
-  it("renders a heading", () => {
-    const heading = screen.getByRole("heading", {
-      name: /hola, soy christian/i,
-    });
-
-    expect(heading).toBeInTheDocument();
+describe("Navigation", () => {
+  it("renders navigation list", async () => {
+    expect(await screen.findAllByRole("listitem")).toHaveLength(2);
   });
 });
