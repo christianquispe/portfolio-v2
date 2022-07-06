@@ -4,10 +4,10 @@ import Image from "next/image";
 import NextLink from "next/link";
 import { Text, Spacer, Link } from "@nextui-org/react";
 
-import { useDialog } from "@hooks";
+import { useDialog } from "@/hooks";
 
-import { BurgerBtn } from "@components/ui";
-import { VCardModal } from "@components/me";
+import { BurgerBtn } from "@/components/ui";
+import { VCardModal } from "@/components/me";
 
 import { NavbarStyled, NavListWrraper } from "./styles";
 

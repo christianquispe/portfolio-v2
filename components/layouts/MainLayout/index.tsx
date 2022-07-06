@@ -1,9 +1,9 @@
 import { Container, Text, Link } from "@nextui-org/react";
 
-import { Metadata } from "@interfaces";
+import { Metadata } from "@/interfaces";
 
-import { OpenGraph } from "@components/seo";
-import { Header } from "@components/ui";
+import { OpenGraph } from "@/components/seo";
+import { Header } from "@/components/ui";
 
 import { WrapperStyled } from "./styles";
 

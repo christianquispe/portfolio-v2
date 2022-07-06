@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import { AppProps } from "next/app";
 import { NextUIProvider } from "@nextui-org/react";
 
-import { darkTheme } from "@themes";
+import { darkTheme } from "@/themes";
 
 import "../styles/globals.css";
 import "../styles/dracula-prism.css";

@@ -1,11 +1,11 @@
 import { GetStaticProps } from "next";
 
-import { getAllFilesMetadata } from "@lib/mdx";
+import { getAllFilesMetadata } from "@/lib/mdx";
 
-import { MainLayout } from "@components/layouts";
-import { AlertInfo, LenguageSection } from "@components/learning";
+import { MainLayout } from "@/components/layouts";
+import { AlertInfo, LenguageSection } from "@/components/learning";
 
-import { orderByDate } from "@utils/functions";
+import { orderByDate } from "@/utils/functions";
 
 import { NextPageWithLayout } from "../_app";
 

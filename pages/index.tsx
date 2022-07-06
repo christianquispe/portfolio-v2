@@ -1,5 +1,5 @@
-import { MainLayout } from "@components/layouts";
-import { Banner } from "@components/me";
+import { Banner } from "@/components/me";
+import { MainLayout } from "@/components/layouts";
 
 import { NextPageWithLayout } from "./_app";
 
