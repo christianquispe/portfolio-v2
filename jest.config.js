@@ -20,6 +20,26 @@ const customJestConfig = {
     "^@/pages(.*)$": "<rootDir>/pages/$1",
   },
   testEnvironment: "jest-environment-jsdom",
+  // Esperamos cobertura de todos los archivos js, jsx, ts y tsx.
+  // Excluimos la cobertura de los mocks de MSW (opcional) y de los índices.
+  collectCoverageFrom: [
+    "**/*.{ts,tsx}",
+    "!node_modules",
+    "!.next",
+    "!**/index.ts",
+    "!**/styles.ts",
+  ],
+  // Imponemos un mínimo del 90% de cobertura en las diferentes categorías de prueba.
+  coverageThreshold: {
+    global: {
+      branches: 70,
+      functions: 70,
+      lines: 70,
+      statements: 70,
+    },
+  },
+  // Esperamos recibir el resultado como texto en el terminal.
+  coverageReporters: ["text"],
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
