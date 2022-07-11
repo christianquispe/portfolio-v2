@@ -5,7 +5,7 @@ import { getAllFilesMetadata } from "@/lib/mdx";
 import { MainLayout } from "@/components/layouts";
 import { AlertInfo, LenguageSection } from "@/components/learning";
 
-import { orderByDate } from "@/utils/functions";
+import { getDateByISO, orderByDate, validateDate } from "@/utils/functions";
 
 import { NextPageWithLayout } from "../_app";
 
@@ -35,8 +35,14 @@ Home.getLayout = (page) => (
 );
 
 export const getStaticProps: GetStaticProps = async () => {
-  const unorderedPosts = await getAllFilesMetadata();
-  const posts = unorderedPosts.sort(orderByDate);
+  const unorderedPosts: any[] = await getAllFilesMetadata();
+  unorderedPosts.forEach((post: any, i) => {
+    const hasValidDate = validateDate(post.date);
+    if (!hasValidDate) {
+      throw new Error("Fecha mal escrita");
+    }
+  });
+  const posts = orderByDate(unorderedPosts);
 
   return {
     props: {
