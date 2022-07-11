@@ -12,14 +12,14 @@ export const BurgerBtn: React.FC<BurgerBtnProps> = ({
   onOpen,
 }) => {
   return (
-    <>
-      <BurgerBtnStyled
-        className={`${active ? "closable" : ""}`}
-        onClick={() => (active ? onClose() : onOpen())}
-      >
-        <div className="line top"></div>
-        <div className="line bottom"></div>
-      </BurgerBtnStyled>
-    </>
+    <BurgerBtnStyled
+      role="button"
+      tabIndex={1}
+      className={`${active ? "closable" : ""}`}
+      onClick={() => (active ? onClose() : onOpen())}
+    >
+      <div className="line top"></div>
+      <div className="line bottom"></div>
+    </BurgerBtnStyled>
   );
 };
