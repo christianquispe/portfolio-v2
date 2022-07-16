@@ -1,48 +1,33 @@
-import { screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import { BurgerBtn } from "@/components/ui";
 
 import { setupComponentForTest } from "@/utils/utils-test";
 
 describe("<BurgerBtn />", () => {
-  // let open = false;
-
-  // const handleOpen = () => {
-  //   open = true;
-  // };
-
-  // const handleClose = () => {
-  //   open = false;
-  // };
-
-  // it("renders navigation list", async () => {
-  //   const { user, container } = setupComponentForTest(
-  //     <BurgerBtn active={open} onClose={handleClose} onOpen={handleOpen} />
-  //   );
-  //   const button = screen.getByRole("button");
-  //   console.log(open, "antes de ser clickeado");
-  //   screen.debug();
-  //   await user.click(button);
-  //   console.log(open, "despues de ser clickeado");
-  //   // expect(button).toHaveClass("closable");
-  //   setupComponentForTest(
-  //     <BurgerBtn active={open} onClose={handleClose} onOpen={handleOpen} />
-  //   );
-  //   screen.debug();
-  // });
-
-  it("<BurgerBtn active={false} />", async () => {
-    setupComponentForTest(
-      <BurgerBtn active={false} onClose={() => {}} onOpen={() => {}} />
+  it("should render correctly", () => {
+    render(<BurgerBtn active={false} onClose={jest.fn()} onOpen={jest.fn()} />);
+  });
+  it("should trigger event when modal is open and close", async () => {
+    let open = false;
+    const closeHandler = jest.fn().mockImplementation(() => (open = false));
+    const openHandler = jest.fn().mockImplementation(() => (open = true));
+    const { user, rerender } = setupComponentForTest(
+      <BurgerBtn active={open} onClose={closeHandler} onOpen={openHandler} />
     );
     const button = screen.getByRole("button");
     expect(button).not.toHaveClass("closable");
-  });
-  it("<BurgerBtn active={false} />", async () => {
-    setupComponentForTest(
-      <BurgerBtn active={true} onClose={() => {}} onOpen={() => {}} />
+    await user.click(button);
+    expect(openHandler).toHaveBeenCalled();
+    rerender(
+      <BurgerBtn active={open} onClose={closeHandler} onOpen={openHandler} />
     );
-    const button = screen.getByRole("button");
     expect(button).toHaveClass("closable");
+    await user.click(button);
+    expect(closeHandler).toHaveBeenCalled();
+    rerender(
+      <BurgerBtn active={open} onClose={closeHandler} onOpen={openHandler} />
+    );
+    expect(button).not.toHaveClass("closable");
   });
 });
