@@ -10,7 +10,7 @@ describe("<LenguageCard />", () => {
     title: "TITLE",
     description: "DESCRIPTION",
     extension: "tsx",
-    imgSrc: "/image",
+    imgSrc: "/html-icon.png",
     slug: "html",
   };
   it("render component with props", async () => {
@@ -30,5 +30,7 @@ describe("<LenguageCard />", () => {
       "href",
       `/blog/lenguages/${cardData.slug}`
     );
+    const image = screen.getByRole("img");
+    expect(image).toBeInTheDocument();
   });
 });

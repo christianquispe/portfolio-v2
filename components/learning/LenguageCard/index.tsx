@@ -10,6 +10,7 @@ interface LenguageCardProps {
   imgSrc: string;
   extension: string;
   slug: string;
+  imgAlt?: string;
 }
 
 export const LenguageCard: React.FC<LenguageCardProps> = ({
@@ -18,6 +19,7 @@ export const LenguageCard: React.FC<LenguageCardProps> = ({
   imgSrc,
   extension,
   slug,
+  imgAlt,
 }) => {
   return (
     <article>
@@ -27,7 +29,7 @@ export const LenguageCard: React.FC<LenguageCardProps> = ({
             <Card.Header>
               <ImgWrapper>
                 <Image
-                  alt={title}
+                  alt={imgAlt || title}
                   src={imgSrc || ""}
                   width="34px"
                   height="34px"

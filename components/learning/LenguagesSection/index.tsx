@@ -17,7 +17,7 @@ export const LenguageSection: React.FC<LenguageProps> = ({ posts }) => {
         transform="uppercase"
         css={{ fd: "column", dflex: "center" }}
       >
-        Lenguajes para un
+        Lenguajes para un{" "}
         <Text
           span
           size={30}

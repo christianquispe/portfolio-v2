@@ -50,7 +50,12 @@ export const VCardModal: React.FC<VCardProps> = ({ src }) => {
                     rel="noreferrer"
                   >
                     <Button size="xs" light auto>
-                      <Icon id={IconsId.LinkedIn} size={20} filled />
+                      <Icon
+                        alt="LinkedIn"
+                        id={IconsId.LinkedIn}
+                        size={20}
+                        filled
+                      />
                     </Button>
                   </Link>
                   <Link
@@ -59,7 +64,12 @@ export const VCardModal: React.FC<VCardProps> = ({ src }) => {
                     rel="noreferrer"
                   >
                     <Button size="xs" light auto>
-                      <Icon id={IconsId.GitHub} size={20} filled />
+                      <Icon
+                        alt="Git Hub"
+                        id={IconsId.GitHub}
+                        size={20}
+                        filled
+                      />
                     </Button>
                   </Link>
                 </Grid.Container>
@@ -75,7 +85,7 @@ export const VCardModal: React.FC<VCardProps> = ({ src }) => {
         onClick={() => setVisible(true)}
         aria-label="show qr"
       >
-        <Icon id={IconsId.QR} size={20} filled />
+        <Icon alt="Código QR" id={IconsId.QR} size={20} filled />
       </Button>
     </>
   );
