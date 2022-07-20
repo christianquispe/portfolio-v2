@@ -8,6 +8,7 @@
       "@/hooks": ["hooks/index.ts"],
       "@/themes": ["themes/index.ts"],
       "@/utils/*": ["utils/*"],
+      "@/test-utils": ["test-utils/index.ts"],
       "@/interfaces": ["interfaces/index.ts"]
     },
     "target": "es5",

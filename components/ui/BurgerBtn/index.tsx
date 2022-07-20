@@ -14,6 +14,7 @@ export const BurgerBtn: React.FC<BurgerBtnProps> = ({
   return (
     <BurgerBtnStyled
       role="button"
+      aria-label="burgerBtn"
       tabIndex={1}
       className={`${active ? "closable" : ""}`}
       onClick={() => (active ? onClose() : onOpen())}
