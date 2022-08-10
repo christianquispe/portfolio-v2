@@ -25,6 +25,7 @@ const customJestConfig = {
   // Excluimos la cobertura de los mocks de MSW (opcional) y de los índices.
   collectCoverageFrom: [
     "**/*.{ts,tsx}",
+    "!themes",
     "!node_modules",
     "!.next",
     "!**/index.ts",
