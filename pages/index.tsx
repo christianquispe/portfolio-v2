@@ -1,4 +1,4 @@
-import { Banner } from "@/components/me";
+import { Banner, MeSection } from "@/components/me";
 import { MainLayout } from "@/components/layouts";
 
 import { NextPageWithLayout } from "./_app";
@@ -7,6 +7,7 @@ const Home: NextPageWithLayout = () => {
   return (
     <>
       <Banner />
+      <MeSection />
     </>
   );
 };

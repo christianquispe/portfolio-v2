@@ -5,7 +5,7 @@ import { getAllFilesMetadata } from "@/lib/mdx";
 import { MainLayout } from "@/components/layouts";
 import { AlertInfo, LenguageSection } from "@/components/learning";
 
-import { getDateByISO, orderByDate, validateDate } from "@/utils/functions";
+import { orderByDate, validateDate } from "@/utils/functions";
 
 import { NextPageWithLayout } from "../_app";
 
