@@ -56,9 +56,10 @@ export const Navbar: React.FC = () => {
           <Text
             weight="bold"
             css={{
-              fontSize: "$xl2",
-              "@md": {
-                fontSize: "$xl4",
+              fontSize: "$xl4",
+              display: "none",
+              "@xs": {
+                display: "initial",
               },
             }}
           >
