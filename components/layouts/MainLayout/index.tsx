@@ -22,9 +22,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
 
       <Header />
 
-      <main>
-        <Container lg>{children}</Container>
-      </main>
+      <main>{children}</main>
 
       <footer>
         <Container lg>
