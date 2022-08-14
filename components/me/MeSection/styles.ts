@@ -27,6 +27,7 @@ export const MeSectionStyled = styled("section", {
       backgroundColor: "$accents0",
       padding: "$10",
       borderRadius: "4px",
+      height: "fit-content"
     },
     ".container-avatar": {
       width: "100%",

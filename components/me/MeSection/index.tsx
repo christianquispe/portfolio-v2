@@ -1,7 +1,9 @@
 import Image from "next/image";
+import { Text } from "@nextui-org/react";
+
+import { ProjectsList } from "@/components/me";
 
 import { MeSectionStyled } from "./styles";
-import { Text } from "@nextui-org/react";
 
 export const MeSection: React.FC = () => {
   return (
@@ -50,6 +52,14 @@ export const MeSection: React.FC = () => {
         </article>
         <section className="projects section-into-me">
           <Text h3>¿Qué proyectos realicé?</Text>
+          <ProjectsList
+            projects={[
+              { name: "Test Project", description: "Prueba" },
+              { name: "Test Project 2", description: "Prueba 2" },
+              { name: "Test Project 3", description: "Prueba 3" },
+              { name: "Test Project 4", description: "Prueba 4" },
+            ]}
+          />
         </section>
       </div>
     </MeSectionStyled>

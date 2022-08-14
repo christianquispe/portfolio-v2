@@ -5,12 +5,16 @@ import { ProjectCard } from "./index";
 const mockProjects = [
   {
     name: "Crud",
+    description: "Este proyecto es de prueba",
   },
 ];
 
 test("<ProjectCard />", () => {
   render(<ProjectCard project={mockProjects[0]} />);
-  screen.getByRole("heading", {
+  const title = screen.getByRole("heading", {
     name: "Crud",
   });
+  const description = screen.getByText(mockProjects[0].description);
+  expect(title).toBeInTheDocument();
+  expect(description).toBeInTheDocument();
 });
