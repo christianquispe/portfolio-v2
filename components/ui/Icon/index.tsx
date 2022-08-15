@@ -10,7 +10,7 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
 export const Icon: React.FC<IconProps> = ({
   id,
   fill = "currentColor",
-  filled,
+  filled = true,
   size,
   height,
   width,
