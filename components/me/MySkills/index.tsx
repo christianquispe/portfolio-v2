@@ -1,4 +1,11 @@
+import { ComponentPropsWithoutRef } from "react";
+import { Text } from "@nextui-org/react";
+
+import { Icon } from "@/components/ui";
+
 import { IconsId } from "@/interfaces";
+
+import { SkillItemStyled, SkillsListStyled, MySkillsStyled } from "./styles";
 
 interface Skill {
   name: string;
@@ -6,23 +13,27 @@ interface Skill {
   iconId: IconsId;
 }
 
-interface MySkillsProps {
+type MySkillsStyledProps = ComponentPropsWithoutRef<typeof MySkillsStyled>;
+
+interface MySkillsProps extends MySkillsStyledProps {
   skills: Skill[];
 }
 
-export const MySkills: React.FC<MySkillsProps> = ({ skills }) => {
+export const MySkills: React.FC<MySkillsProps> = ({ skills, ...rest }) => {
   return (
-    <ul>
-      {skills.map((item, index) => (
-        <li key={item + " " + index}>{item.name}</li>
-      ))}
-      {/* <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Typescript</li>
-      <li>Reactjs</li>
-      <li>Nextjs</li>
-      <li>Graphql</li> */}
-    </ul>
+    <MySkillsStyled {...rest}>
+      <Text h3>¿Con qué tecnologías trabajo?</Text>
+      <div>
+        <Text>Uso las siguientes tecnologías para trabajar</Text>
+        <SkillsListStyled>
+          {skills.map((item, index) => (
+            <SkillItemStyled key={item + " " + index}>
+              <Icon alt={item.name} id={item.iconId} filled size={20} />
+              {item.name}
+            </SkillItemStyled>
+          ))}
+        </SkillsListStyled>
+      </div>
+    </MySkillsStyled>
   );
 };
