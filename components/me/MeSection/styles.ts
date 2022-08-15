@@ -20,15 +20,6 @@ export const MeSectionStyled = styled("section", {
       gridArea: "projects",
     },
     gridTemplateAreas: `"me" "skills" "projects"`,
-    ".section-into-me": {
-      display: "grid",
-      gap: "15px",
-      gridTemplateRow: "auto",
-      backgroundColor: "$accents0",
-      padding: "$10",
-      borderRadius: "4px",
-      height: "fit-content",
-    },
     ".container-avatar": {
       width: "100%",
       maxWidth: "400px",
@@ -38,18 +29,9 @@ export const MeSectionStyled = styled("section", {
         borderRadius: "4px",
       },
     },
-    "@sm": {
-      ".me": {
-        gridTemplateColumns: "400px 1fr",
-      },
-    },
     "@md": {
       gridTemplateColumns: "400px 1fr",
-      gridTemplateAreas: `"me skills"
-                        "me projects"`,
-      ".me": {
-        gridTemplateColumns: "initial",
-      },
+      gridTemplateAreas: `"me skills" "me projects"`,
     },
   },
 });
