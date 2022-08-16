@@ -7,4 +7,6 @@ export enum IconsId {
   LinkedIn = "linked-in",
   GitHub = "git-hub",
   QR = "qr",
+  MailFilled = "mail-filled",
+  PhoneFilled = "phone-filled",
 }

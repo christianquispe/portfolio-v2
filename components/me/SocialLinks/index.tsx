@@ -1,5 +1,4 @@
 import { ComponentPropsWithoutRef } from "react";
-import Link from "next/link";
 
 import { Icon } from "@/components/ui";
 
@@ -27,16 +26,14 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({ ...props }) => {
     <SocialMediaStyled {...props}>
       {SOCIAL_LINKS.map((socialItem, index) => (
         <SocialMediaItemStyled key={socialItem.iconId + " " + index}>
-          <Link href={socialItem.link}>
-            <a target="_blank" rel="noreferrer">
-              <Icon
-                alt={socialItem.name}
-                id={socialItem.iconId}
-                size={25}
-                filled
-              />
-            </a>
-          </Link>
+          <a href={socialItem.link} target="_blank" rel="noreferrer">
+            <Icon
+              alt={socialItem.name}
+              id={socialItem.iconId}
+              size={25}
+              filled
+            />
+          </a>
         </SocialMediaItemStyled>
       ))}
     </SocialMediaStyled>

@@ -15,7 +15,7 @@ export const MeCardStyled = styled("article", {
     position: "absolute",
     top: "$5",
     right: "$5",
-    bgBlur: "#0f111466",
+    bg: "#0f1114",
     padding: "$5",
     borderRadius: "$base",
   },
@@ -24,5 +24,26 @@ export const MeCardStyled = styled("article", {
   },
   "@md": {
     gridTemplateColumns: "initial",
+  },
+});
+
+export const DetailsStyled = styled("section", {
+  display: "flex",
+  justifyContent: "center",
+  flexDirection: "column",
+});
+
+export const ContactDataStyled = styled("div", {
+  display: "flex",
+  justifyContent: "space-between",
+  flexWrap: "wrap",
+  ul: {
+    margin: 0,
+    mt: "$5",
+  },
+  li: {
+    display: "flex",
+    gap: "$3",
+    alignItems: "center",
   },
 });

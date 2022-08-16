@@ -1,10 +1,14 @@
 import { ComponentPropsWithoutRef } from "react";
 import Image from "next/image";
-import { Text } from "@nextui-org/react";
+import { Text, User } from "@nextui-org/react";
 
 import { SocialLinks } from "@/components/me";
 
-import { MeCardStyled } from "./styles";
+import { Icon } from "@/components/ui";
+
+import { IconsId } from "@/interfaces";
+
+import { DetailsStyled, MeCardStyled, ContactDataStyled } from "./styles";
 
 type MeCardProps = ComponentPropsWithoutRef<typeof MeCardStyled>;
 
@@ -19,9 +23,16 @@ export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
           width={50}
           layout="responsive"
         />
-        <SocialLinks className="social-media-links" />
+        <User
+          className="social-media-links"
+          name="Christian Quispe"
+          src="/logo-transparente-blanco.png"
+          altText="Logo de Christian Quispe"
+        >
+          Pragramador Front End
+        </User>
       </div>
-      <div>
+      <DetailsStyled>
         <Text h3>¿Quién soy?</Text>
         <div>
           <Text>
@@ -32,7 +43,20 @@ export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
             Graphql.
           </Text>
         </div>
-      </div>
+        <ContactDataStyled>
+          <ul>
+            <li>
+              <Icon id={IconsId.MailFilled} alt="Mail" size={16} />
+              christianquispecamasca@gmail.com
+            </li>
+            <li>
+              <Icon id={IconsId.PhoneFilled} alt="Phone" size={16} />
+              +51 952350324
+            </li>
+          </ul>
+          <SocialLinks />
+        </ContactDataStyled>
+      </DetailsStyled>
     </MeCardStyled>
   );
 };

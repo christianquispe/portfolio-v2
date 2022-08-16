@@ -8,4 +8,5 @@ export const BannerStyled = styled("section", {
   jc: "center",
   gap: "40px",
   minHeight: "calc(100vh - 120px)",
+  py: "$5",
 });
