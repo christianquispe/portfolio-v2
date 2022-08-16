@@ -1,6 +1,13 @@
 import { AiFillHtml5 } from "react-icons/ai";
 import { DiCss3, DiReact } from "react-icons/di";
-import { SiTypescript, SiJest, SiMongodb, SiNextdotjs, SiJavascript } from "react-icons/si";
+import {
+  SiTypescript,
+  SiJest,
+  SiMongodb,
+  SiNextdotjs,
+  SiJavascript,
+  SiTestinglibrary,
+} from "react-icons/si";
 import { GrGraphQl, GrNode } from "react-icons/gr";
 
 import { Skill } from "@/interfaces";
@@ -50,6 +57,11 @@ export const SKILLS_LIST: Skill[] = [
     name: "Jest",
     level: "medium",
     icon: <SiJest size={20} />,
+  },
+  {
+    name: "React Testing Library",
+    level: "medium",
+    icon: <SiTestinglibrary size={20} />,
   },
   {
     name: "MongoDB",
