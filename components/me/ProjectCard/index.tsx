@@ -30,9 +30,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </div>
           <div className="actions">
             <Button color="primary" flat auto>
-              <a href={project.url} target="_blank" rel="noreferrer">Code</a>
+              <a href={project.urlCode} target="_blank" rel="noreferrer">Code</a>
             </Button>
-            <Button color="gradient" ghost auto>
+            <Button color="gradient" bordered auto>
               <a href={project.url} target="_blank" rel="noreferrer">
                 Visit
               </a>

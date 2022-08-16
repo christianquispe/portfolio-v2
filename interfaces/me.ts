@@ -7,6 +7,7 @@ export interface Project {
   stack: string[]
   tags: string[]
   url: string
+  urlCode: string
 }
 
 export type SkillLevel = "high" | "medium" | "low"
