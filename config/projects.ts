@@ -22,7 +22,7 @@ export const PROJECTS_LIST: Project[] = [
     description: "Esta fue la primera version de mi portafolio",
     url: "https://christianquispe.vercel.app/",
     stack: ["Nextjs", "Typescript", "React Hooks", "Tailwindcss"],
-    img: "/projects/dely.png",
+    img: "/projects/old-portfolio.png",
     tags: ["responsive", "landing", "production"],
   },
 ];

@@ -7,8 +7,8 @@ export const CardHeaderStyled = styled(Card.Header, {
 });
 
 export const CardFooterStyled = styled(Card.Footer, {
-  position: "absolute",
-  bgBlur: "#0f111466",
+  position: "relative",
+  bgBlur: "#0f111488",
   bottom: 0,
   zIndex: 1,
   display: "flex",
@@ -16,8 +16,8 @@ export const CardFooterStyled = styled(Card.Footer, {
   alignItems: "center",
   justifyContent: "space-between",
   gap: "$3",
-  height: "100%",
   "@xs": {
+    position: "absolute",
     borderTop: "$borderWeights$light solid $gray800",
     height: "initial",
   },
