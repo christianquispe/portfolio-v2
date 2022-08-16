@@ -29,7 +29,7 @@ export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
           src="/logo-transparente-blanco.png"
           altText="Logo de Christian Quispe"
         >
-          Pragramador Front End
+          Programador Front End
         </User>
       </div>
       <DetailsStyled>

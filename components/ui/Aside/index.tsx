@@ -9,7 +9,7 @@ export const Aside: React.FC = () => {
         src="/logo-transparente-blanco.png"
         altText="Logo de Christian Quispe"
       >
-        Pragramador Front End
+        Programador Front End
       </User>
     </AsideStyled>
   );
