@@ -14,20 +14,22 @@ export const CardFooterStyled = styled(Card.Footer, {
   display: "flex",
   flexWrap: "wrap",
   alignItems: "center",
-  justifyContent: "space-between",
+  justifyContent: "flex-end",
   gap: "$3",
   "@xs": {
     position: "absolute",
+    flexWrap: "nowrap",
     borderTop: "$borderWeights$light solid $gray800",
-    height: "initial",
   },
   ".details": {
     flexGrow: 1,
   },
   ".actions": {
-    flexGrow: 1,
+    display: "flex",
+    justifyContent: "flex-end",
+    gap: "$3",
     "@md": {
-      flexGrow: 0,
+      flexGrow: 1,
     },
   },
 });

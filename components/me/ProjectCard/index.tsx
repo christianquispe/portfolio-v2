@@ -28,16 +28,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </Text>
             <IconsStyled>{project?.stack?.join(", ")}</IconsStyled>
           </div>
-          <Button flat auto rounded className="actions" css={{ color: "#94f9f0", bg: "#94f9f026" }}>
-            <Text
-              css={{ color: "inherit" }}
-              size={12}
-              weight="bold"
-              transform="uppercase"
-            >
-              Demo
-            </Text>
-          </Button>
+          <div className="actions">
+            <Button color="primary" flat auto>
+              <a href={project.url} target="_blank" rel="noreferrer">Code</a>
+            </Button>
+            <Button color="gradient" ghost auto>
+              <a href={project.url} target="_blank" rel="noreferrer">
+                Visit
+              </a>
+            </Button>
+          </div>
         </CardFooterStyled>
       </Card>
     </article>

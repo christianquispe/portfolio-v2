@@ -20,7 +20,7 @@ export const PROJECTS_LIST: Project[] = [
   {
     name: "My old portfolio",
     description: "Esta fue la primera version de mi portafolio",
-    url: "https://christianquispe.vercel.app/",
+    url: "https://old-christianquispe.vercel.app/",
     stack: ["Nextjs", "Typescript", "React Hooks", "Tailwindcss"],
     img: "/projects/old-portfolio.png",
     tags: ["responsive", "landing", "production"],
