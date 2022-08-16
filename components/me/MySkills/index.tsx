@@ -3,15 +3,9 @@ import { Text } from "@nextui-org/react";
 
 import { Icon } from "@/components/ui";
 
-import { IconsId } from "@/interfaces";
+import { Skill } from "@/interfaces";
 
 import { SkillItemStyled, SkillsListStyled, MySkillsStyled } from "./styles";
-
-interface Skill {
-  name: string;
-  web: string;
-  iconId: IconsId;
-}
 
 type MySkillsStyledProps = ComponentPropsWithoutRef<typeof MySkillsStyled>;
 
@@ -28,7 +22,11 @@ export const MySkills: React.FC<MySkillsProps> = ({ skills, ...rest }) => {
         <SkillsListStyled>
           {skills.map((item, index) => (
             <SkillItemStyled key={item + " " + index}>
-              <Icon alt={item.name} id={item.iconId} filled size={20} />
+              {typeof item.icon === "string" ? (
+                <Icon alt={item.name} id={item.icon} filled size={20} />
+              ) : (
+                <>{item.icon}</>
+              )}
               {item.name}
             </SkillItemStyled>
           ))}

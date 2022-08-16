@@ -2,74 +2,9 @@ import { Text, Container, theme } from "@nextui-org/react";
 
 import { ProjectsList, MySkills, MeCard } from "@/components/me";
 
-import { IconsId } from "@/interfaces";
+import { SKILLS_LIST, PROJECTS_LIST } from "@/config";
 
 import { MeSectionStyled } from "./styles";
-
-const hardcodeProjects = [
-  { name: "Test Project", description: "Prueba" },
-  { name: "Test Project 2", description: "Prueba 2" },
-  { name: "Test Project 3", description: "Prueba 3" },
-  { name: "Test Project 4", description: "Prueba 4" },
-];
-
-const hardcodeSkills = [
-  {
-    name: "HTML",
-    web: "klfadjskljfds",
-    iconId: IconsId.GitHub,
-  },
-  {
-    name: "CSS",
-    web: "klfadjskljfds",
-    iconId: IconsId.GitHub,
-  },
-  {
-    name: "JavaScript",
-    web: "klfadjskljfds",
-    iconId: IconsId.GitHub,
-  },
-  {
-    name: "Typescript",
-    web: "klfadjskljfds",
-    iconId: IconsId.GitHub,
-  },
-  {
-    name: "React.js",
-    web: "klfadjskljfds",
-    iconId: IconsId.GitHub,
-  },
-  {
-    name: "Next.js",
-    web: "klfadjskljfds",
-    iconId: IconsId.GitHub,
-  },
-  {
-    name: "Graphql",
-    web: "klfadjskljfds",
-    iconId: IconsId.GitHub,
-  },
-  {
-    name: "Node",
-    web: "klfadjskljfds",
-    iconId: IconsId.GitHub,
-  },
-  {
-    name: "Jest",
-    web: "klfadjskljfds",
-    iconId: IconsId.GitHub,
-  },
-  {
-    name: "MongoDB",
-    web: "klfadjskljfds",
-    iconId: IconsId.GitHub,
-  },
-  {
-    name: "Go",
-    web: "klfadjskljfds",
-    iconId: IconsId.GitHub,
-  },
-];
 
 export const MeSection: React.FC = () => {
   return (
@@ -91,8 +26,8 @@ export const MeSection: React.FC = () => {
         </Text>
         <div className="wrapper-me-content">
           <MeCard className="me" />
-          <MySkills className="skills" skills={hardcodeSkills} />
-          <ProjectsList className="projects" projects={hardcodeProjects} />
+          <MySkills className="skills" skills={SKILLS_LIST} />
+          <ProjectsList className="projects" projects={PROJECTS_LIST} />
         </div>
       </MeSectionStyled>
     </Container>

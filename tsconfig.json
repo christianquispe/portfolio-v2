@@ -9,6 +9,7 @@
       "@/themes": ["themes/index.ts"],
       "@/utils/*": ["utils/*"],
       "@/test-utils": ["test-utils/index.ts"],
+      "@/config": ["config/index.ts"],
       "@/interfaces": ["interfaces/index.ts"]
     },
     "target": "es5",
