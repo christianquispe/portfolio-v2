@@ -1,6 +1,6 @@
 import { AiFillHtml5 } from "react-icons/ai";
-import { DiCss3, DiJavascript, DiReact } from "react-icons/di";
-import { SiTypescript, SiJest, SiMongodb, SiNextdotjs } from "react-icons/si";
+import { DiCss3, DiReact } from "react-icons/di";
+import { SiTypescript, SiJest, SiMongodb, SiNextdotjs, SiJavascript } from "react-icons/si";
 import { GrGraphQl, GrNode } from "react-icons/gr";
 
 import { Skill } from "@/interfaces";
@@ -19,7 +19,7 @@ export const SKILLS_LIST: Skill[] = [
   {
     name: "JavaScript",
     level: "high",
-    icon: <DiJavascript size={20} />,
+    icon: <SiJavascript size={20} />,
   },
   {
     name: "Typescript",
