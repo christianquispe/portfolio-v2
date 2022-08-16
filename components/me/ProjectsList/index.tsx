@@ -23,9 +23,7 @@ export const ProjectsList: React.FC<ProjectsListProps> = ({
       <Grid.Container gap={2} css={{ p: "0" }} justify="center">
         {projects.map((project, index) => (
           <Grid key={project.name + "-" + index} sm={6}>
-            <ProjectCard
-              project={{ description: project.description, name: project.name }}
-            />
+            <ProjectCard project={project} />
           </Grid>
         ))}
       </Grid.Container>
