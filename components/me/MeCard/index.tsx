@@ -1,7 +1,8 @@
 import { ComponentPropsWithoutRef } from "react";
+import { useRouter } from 'next/router';
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Button, Text, User, useTheme, Link } from "@nextui-org/react";
-import { useTranslations } from "next-intl";
 
 import { SocialLinks } from "@/components/me";
 
@@ -15,6 +16,7 @@ type MeCardProps = ComponentPropsWithoutRef<typeof MeCardStyled>;
 
 export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
   const { isDark } = useTheme();
+  const { locale } = useRouter();
   const t = useTranslations("Index.MeCard");
 
   return (
@@ -68,7 +70,7 @@ export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
           </ul>
           <SocialLinks />
         </ContactDataStyled>
-        <Link href="/resume.pdf" target="_blank" css={{ display: "block" }}>
+        <Link href={`/resume_${locale?.toLocaleUpperCase()}.pdf`} target="_blank" css={{ display: "block" }}>
           <Button
             color="secondary"
             shadow
