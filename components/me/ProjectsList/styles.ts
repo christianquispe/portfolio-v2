@@ -7,5 +7,14 @@ export const ProjectsListStyled = styled("section", {
   backgroundColor: "$accents0",
   padding: "$10",
   borderRadius: "4px",
-  height: "fit-content",
+  height: "550px",
+});
+
+export const ProjectsListHeaderStyled = styled("div", {
+  display: "flex",
+  justifyContent: "space-between",
+  ".filters": {
+    display: "flex",
+    gap: "$3",
+  },
 });
