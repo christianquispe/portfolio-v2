@@ -30,7 +30,7 @@ export const ProjectsList: React.FC<ProjectsListProps> = ({
   return (
     <ProjectsListStyled {...rest}>
       <ProjectsListHeaderStyled>
-        <Text h3>¿Qué proyectos realicé?</Text>
+        <Text className="projects-title" h3>¿Qué proyectos realicé?</Text>
         <div className="filters">
           {projectTags.map((tag, index) => (
             <Button

@@ -13,7 +13,11 @@ export const ProjectsListStyled = styled("section", {
 export const ProjectsListHeaderStyled = styled("div", {
   display: "flex",
   justifyContent: "space-between",
+  flexWrap: "wrap",
+  gap: "$3",
+  pb: "$3",
   ".filters": {
+    ml: "auto",
     display: "flex",
     gap: "$3",
   },

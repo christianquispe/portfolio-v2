@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef } from "react";
 import Image from "next/image";
-import { Text, User, useTheme } from "@nextui-org/react";
+import { Button, Text, User, useTheme, Link } from "@nextui-org/react";
 
 import { SocialLinks } from "@/components/me";
 
@@ -13,7 +13,7 @@ import { DetailsStyled, MeCardStyled, ContactDataStyled } from "./styles";
 type MeCardProps = ComponentPropsWithoutRef<typeof MeCardStyled>;
 
 export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
-  const { isDark } = useTheme()
+  const { isDark } = useTheme();
 
   return (
     <MeCardStyled {...props}>
@@ -28,7 +28,9 @@ export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
         <User
           className="social-media-links"
           name="Christian Quispe"
-          src={isDark ? "/logo-transparente-blanco.png" : "/logo-transparente.png"}
+          src={
+            isDark ? "/logo-transparente-blanco.png" : "/logo-transparente.png"
+          }
           altText="Logo de Christian Quispe"
         >
           Programador Front End
@@ -48,8 +50,20 @@ export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
         <ContactDataStyled>
           <ul>
             <li>
-              <Icon id={IconsId.MailFilled} alt="Mail" size={16} />
-              christianquispecamasca@gmail.com
+              <Icon
+                className="mail-icon"
+                id={IconsId.MailFilled}
+                alt="Mail"
+                size={16}
+              />
+              <Link
+                color="secondary"
+                href="mailto:christianquispecamasca@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                christianquispecamasca@gmail.com
+              </Link>
             </li>
             <li>
               <Icon id={IconsId.PhoneFilled} alt="Phone" size={16} />
@@ -58,6 +72,15 @@ export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
           </ul>
           <SocialLinks />
         </ContactDataStyled>
+        <Link href="/resume.pdf" target="_blank" css={{ display: "block" }}>
+          <Button
+            color="secondary"
+            shadow
+            css={{ display: "block", w: "100%" }}
+          >
+            Ver CV
+          </Button>
+        </Link>
       </DetailsStyled>
     </MeCardStyled>
   );

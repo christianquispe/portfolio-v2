@@ -37,6 +37,12 @@ export const ContactDataStyled = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   flexWrap: "wrap",
+  ".mail-icon": {
+    display: "none",
+    "@xs": {
+      display: "initial",
+    },
+  },
   ul: {
     margin: 0,
     mt: "$5",
