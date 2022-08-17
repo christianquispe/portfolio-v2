@@ -4,10 +4,20 @@
       "greet": "Hola",
       "presentation": "soy Christian"
     },
+    "AboutMe": {
+      "title": "Sobre mi"
+    },
     "MeCard": {
       "title": "¿Quién soy?",
       "description": "Soy un desarrollador Front End apasionado por crear aplicaciones web hermosas y funcionales. Tengo una sólida experiencia en desarrollo web y he trabajado con una variedad de tecnologías, incluidas HTML, CSS, JavaScript, Typescript, React, Nextjs y Graphql.",
       "seeResume": "Ver CV"
+    },
+    "Skills": {
+      "title": "¿Con qué tecnologías trabajo?",
+      "description": "Uso las siguientes tecnologías para trabajar"
+    },
+    "Projects": {
+      "title": "¿Qué proyectos realicé?"
     }
   }
 }
