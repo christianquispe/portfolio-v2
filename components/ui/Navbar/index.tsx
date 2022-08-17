@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import NextLink from "next/link";
 import { Text, Spacer, Link, useBodyScroll } from "@nextui-org/react";
 import { useDialog } from "@/hooks";
-import { BurgerBtn, ThemeToggle, Logo } from "@/components/ui";
+import { BurgerBtn, ThemeToggle, Logo, LanguageSelect } from "@/components/ui";
 import { VCardModal } from "@/components/me";
 import { NavbarStyled, NavListWrraper } from "./styles";
 
@@ -83,6 +83,7 @@ export const Navbar: React.FC = () => {
           </li>
         ))}
       </NavListWrraper>
+      <LanguageSelect css={{ml: "$5"}} />
       <ThemeToggle css={{ ml: "$4" }} />
       <VCardModal src="/christian-vcard.svg" />
       <BurgerBtn
