@@ -1,5 +1,6 @@
 import { ComponentPropsWithoutRef } from "react";
 import { Button, Grid, Text } from "@nextui-org/react";
+import { useTranslations } from "next-intl";
 
 import { useProjects } from "@/hooks";
 
@@ -21,6 +22,7 @@ export const ProjectsList: React.FC<ProjectsListProps> = ({
   projectTags,
   ...rest
 }) => {
+  const t = useTranslations("Index.Projects");
   const {
     projects: projectsFiltered,
     filterProjects,
@@ -30,7 +32,9 @@ export const ProjectsList: React.FC<ProjectsListProps> = ({
   return (
     <ProjectsListStyled {...rest}>
       <ProjectsListHeaderStyled>
-        <Text className="projects-title" h3>¿Qué proyectos realicé?</Text>
+        <Text className="projects-title" h3>
+          {t("title")}
+        </Text>
         <div className="filters">
           {projectTags.map((tag, index) => (
             <Button

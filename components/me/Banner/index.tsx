@@ -1,8 +1,11 @@
 import { Text, Grid, Card, Row, Button, Container } from "@nextui-org/react";
+import { useTranslations } from "next-intl";
 
 import { BannerStyled } from "./styles";
 
 export const Banner: React.FC = ({}) => {
+  const t = useTranslations("Index.Banner");
+
   return (
     <Container lg>
       <BannerStyled>
@@ -18,7 +21,8 @@ export const Banner: React.FC = ({}) => {
                   },
                 }}
               >
-                Hola, <br /> soy Christian
+                {t("greet")},
+                <br /> {t("presentation")}
               </Text>
               <Text
                 h2

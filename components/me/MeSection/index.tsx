@@ -1,4 +1,5 @@
 import { Text, Container, theme } from "@nextui-org/react";
+import { useTranslations } from "next-intl";
 
 import { ProjectsList, MySkills, MeCard } from "@/components/me";
 
@@ -7,6 +8,8 @@ import { SKILLS_LIST, PROJECTS_LIST, PROJECT_TAGS } from "@/config";
 import { MeSectionStyled } from "./styles";
 
 export const MeSection: React.FC = () => {
+  const t = useTranslations("Index.AboutMe");
+
   return (
     <Container
       css={{
@@ -22,7 +25,7 @@ export const MeSection: React.FC = () => {
     >
       <MeSectionStyled>
         <Text h2 className="title">
-          Sobre mí
+          {t("title")}
         </Text>
         <div className="wrapper-me-content">
           <MeCard className="me" />

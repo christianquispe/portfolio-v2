@@ -1,6 +1,7 @@
 import { ComponentPropsWithoutRef } from "react";
 import Image from "next/image";
 import { Button, Text, User, useTheme, Link } from "@nextui-org/react";
+import { useTranslations } from "next-intl";
 
 import { SocialLinks } from "@/components/me";
 
@@ -14,6 +15,7 @@ type MeCardProps = ComponentPropsWithoutRef<typeof MeCardStyled>;
 
 export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
   const { isDark } = useTheme();
+  const t = useTranslations("Index.MeCard");
 
   return (
     <MeCardStyled {...props}>
@@ -39,13 +41,7 @@ export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
       <DetailsStyled>
         <Text h3>¿Quién soy?</Text>
         <div>
-          <Text>
-            I am a Front-end developer with a passion for creating beautiful and
-            functional web applications. I have a strong background in web
-            development and have worked with a variety of technologies,
-            including HTML, CSS, JavaScript, Typescript, React, Nextjs and
-            Graphql.
-          </Text>
+          <Text>{t("description")}</Text>
         </div>
         <ContactDataStyled>
           <ul>
@@ -78,7 +74,7 @@ export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
             shadow
             css={{ display: "block", w: "100%" }}
           >
-            Ver CV
+            {t("seeResume")}
           </Button>
         </Link>
       </DetailsStyled>

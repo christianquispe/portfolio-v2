@@ -1,4 +1,5 @@
 import { ComponentPropsWithoutRef } from "react";
+import { useTranslations } from "next-intl";
 import { Text } from "@nextui-org/react";
 
 import { Icon } from "@/components/ui";
@@ -14,11 +15,13 @@ interface MySkillsProps extends MySkillsStyledProps {
 }
 
 export const MySkills: React.FC<MySkillsProps> = ({ skills, ...rest }) => {
+  const t = useTranslations("Index.Skills");
+
   return (
     <MySkillsStyled {...rest}>
-      <Text h3>¿Con qué tecnologías trabajo?</Text>
+      <Text h3>{t('title')}</Text>
       <div>
-        <Text>Uso las siguientes tecnologías para trabajar</Text>
+        <Text>{t('description')}</Text>
         <SkillsListStyled>
           {skills.map((item, index) => (
             <SkillItemStyled key={item + " " + index}>

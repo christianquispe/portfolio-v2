@@ -1,0 +1,23 @@
+{
+  "Index": {
+    "Banner": {
+      "greet": "Hi",
+      "presentation": "I'am Christian"
+    },
+    "AboutMe": {
+      "title": "About me"
+    },
+    "MeCard": {
+      "title": "who I am?",
+      "description": "I am a Front-end developer with a passion for creating beautiful and functional web applications. I have a strong background in web development and have worked with a variety of technologies, including HTML, CSS, JavaScript, Typescript, React, Nextjs and Graphql.",
+      "seeResume": "See resume"
+    },
+    "Skills": {
+      "title": "What technologies do I work with?",
+      "description": "I use the following technologies to work"
+    },
+    "Projects": {
+      "title": "What projects did I do?"
+    }
+  }
+}

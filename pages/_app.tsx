@@ -1,7 +1,8 @@
 import { NextPage } from "next";
 import { AppProps } from "next/app";
 import { NextUIProvider } from "@nextui-org/react";
-import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { NextIntlProvider } from "next-intl";
 
 import { darkTheme, lightTheme } from "@/themes";
 
@@ -18,18 +19,33 @@ type AppPropsWithLayout = AppProps & {
 
 const MyApp: NextPage<AppPropsWithLayout> = ({ Component, pageProps }) => {
   const page: JSX.Element = (
-    <NextThemesProvider
-      defaultTheme="system"
-      attribute="class"
-      value={{
-        light: lightTheme.className,
-        dark: darkTheme.className,
+    <NextIntlProvider
+      formats={{
+        dateTime: {
+          short: {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+          },
+        },
       }}
+      messages={pageProps.messages}
+      now={new Date(pageProps.now)}
+      timeZone="Central Daylight Time"
     >
-      <NextUIProvider>
-        <Component {...pageProps} />
-      </NextUIProvider>
-    </NextThemesProvider>
+      <NextThemesProvider
+        defaultTheme="system"
+        attribute="class"
+        value={{
+          light: lightTheme.className,
+          dark: darkTheme.className,
+        }}
+      >
+        <NextUIProvider>
+          <Component {...pageProps} />
+        </NextUIProvider>
+      </NextThemesProvider>
+    </NextIntlProvider>
   );
 
   const getLayout = Component.getLayout || ((page) => page);

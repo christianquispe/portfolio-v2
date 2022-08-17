@@ -1,0 +1,13 @@
+{
+  "Index": {
+    "Banner": {
+      "greet": "Hola",
+      "presentation": "soy Christian"
+    },
+    "MeCard": {
+      "title": "¿Quién soy?",
+      "description": "Soy un desarrollador Front End apasionado por crear aplicaciones web hermosas y funcionales. Tengo una sólida experiencia en desarrollo web y he trabajado con una variedad de tecnologías, incluidas HTML, CSS, JavaScript, Typescript, React, Nextjs y Graphql.",
+      "seeResume": "Ver CV"
+    }
+  }
+}

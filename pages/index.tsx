@@ -18,4 +18,15 @@ const Home: NextPageWithLayout = () => {
   );
 };
 
+export function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      messages: {
+        ...require(`../messages/layout/${locale}.json`),
+        ...require(`../messages/index/${locale}.json`),
+      },
+    },
+  };
+}
+
 export default Home;
