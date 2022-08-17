@@ -40,6 +40,10 @@ export const Navbar: React.FC = () => {
     }
   }, [events, handleClose, open]);
 
+  useEffect(() => {
+    setBodyHidden(open);
+  }, [open, setBodyHidden]);
+
   return (
     <NavbarStyled>
       <Logo />
@@ -84,11 +88,9 @@ export const Navbar: React.FC = () => {
       <BurgerBtn
         active={open}
         onClose={() => {
-          setBodyHidden(false);
           handleClose();
         }}
         onOpen={() => {
-          setBodyHidden(true);
           handleOpen();
         }}
       />
