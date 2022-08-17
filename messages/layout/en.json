@@ -1,7 +1,14 @@
 {
   "Layout": {
+    "Navbar": {
+      "aboutMe": "About me",
+      "contact": "Contact",
+      "skills": "Skills",
+      "projects": "Projects",
+      "blog": "Blog"
+    },
     "Footer": {
-      "title": "Agosto 2022 - <code>NextUI</code> Web Inspired Design"
+      "title": "Agos 2022 - <code>NextUI</code> Web Inspired Design"
     }
   }
 }

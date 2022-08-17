@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { useTranslations } from "next-intl";
 import NextLink from "next/link";
 import { Text, Spacer, Link, useBodyScroll } from "@nextui-org/react";
 import { useDialog } from "@/hooks";
@@ -12,19 +13,32 @@ interface NavItem {
   name: string;
 }
 
-const navItems: NavItem[] = [
-  {
-    name: "Sobre mi",
-    path: "/",
-  },
-  {
-    name: "Blog",
-    path: "/blog",
-  },
-];
-
 export const Navbar: React.FC = () => {
   const { pathname, events } = useRouter();
+  const t = useTranslations("Layout.Navbar");
+
+  const navItems: NavItem[] = [
+    {
+      name: t("aboutMe"),
+      path: "/",
+    },
+    // {
+    //   name: t("projects"),
+    //   path: "/#projects",
+    // },
+    // {
+    //   name: t("skills"),
+    //   path: "/#skills",
+    // },
+    // {
+    //   name: t("contact"),
+    //   path: "/#contact",
+    // },
+    {
+      name: t("blog"),
+      path: "/blog",
+    },
+  ];
 
   const { open, handleClose, handleOpen } = useDialog();
   const [_, setBodyHidden] = useBodyScroll(null, { scrollLayer: true });
@@ -46,7 +60,11 @@ export const Navbar: React.FC = () => {
 
   return (
     <NavbarStyled>
-      <Logo />
+      <NextLink href="/" passHref>
+        <Link>
+          <Logo />
+        </Link>
+      </NextLink>
       <NextLink href="/" passHref>
         <Link>
           <Text
@@ -83,7 +101,7 @@ export const Navbar: React.FC = () => {
           </li>
         ))}
       </NavListWrraper>
-      <LanguageSelect css={{ml: "$5"}} />
+      <LanguageSelect css={{ ml: "$5" }} />
       <ThemeToggle css={{ ml: "$4" }} />
       <VCardModal src="/christian-vcard.svg" />
       <BurgerBtn

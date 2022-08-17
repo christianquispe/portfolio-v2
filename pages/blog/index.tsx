@@ -28,7 +28,7 @@ const Home: NextPageWithLayout<HomeProps> = ({ posts }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const unorderedPosts: any[] = await getAllFilesMetadata();
   unorderedPosts.forEach((post: any, i) => {
     const hasValidDate = validateDate(post.date);
@@ -41,6 +41,9 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       posts,
+      messages: {
+        ...require(`../../messages/layout/${locale}.json`),
+      },
     },
   };
 };

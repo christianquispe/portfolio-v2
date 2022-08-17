@@ -32,6 +32,7 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
 
 export const getStaticProps: GetStaticProps<LenguagePageProps> = async ({
   params,
+  locale,
 }) => {
   const slug = params?.slug as any;
 
@@ -41,6 +42,10 @@ export const getStaticProps: GetStaticProps<LenguagePageProps> = async ({
     props: {
       frontmatter,
       source,
+      messages: {
+        ...require(`../../../messages/layout/${locale}.json`),
+        ...require(`../../../messages/index/${locale}.json`),
+      },
     },
   };
 };

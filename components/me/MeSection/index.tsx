@@ -23,7 +23,7 @@ export const MeSection: React.FC = () => {
         },
       }}
     >
-      <MeSectionStyled>
+      <MeSectionStyled id="me">
         <Text h2 className="title">
           {t("title")}
         </Text>

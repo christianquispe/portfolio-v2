@@ -1,3 +1,5 @@
+import { GetStaticProps } from 'next';
+
 import { Banner, MeSection } from "@/components/me";
 import { MainLayout } from "@/components/layouts";
 
@@ -18,7 +20,7 @@ const Home: NextPageWithLayout = () => {
   );
 };
 
-export function getStaticProps({ locale }: { locale: string }) {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
       messages: {
@@ -27,6 +29,6 @@ export function getStaticProps({ locale }: { locale: string }) {
       },
     },
   };
-}
+};
 
 export default Home;
