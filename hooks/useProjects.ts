@@ -5,8 +5,6 @@ import { Project } from "@/interfaces";
 export const useProjects = (initProjects: Project[]) => {
   const [projects, setProjects] = useState<Project[]>([]);
 
-  console.log(projects);
-
   const filterProjects = (tag: string) => {
     setProjects([
       ...initProjects.filter((project) => project.tags.includes(tag)),

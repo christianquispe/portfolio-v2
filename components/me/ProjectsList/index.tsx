@@ -13,10 +13,12 @@ type MySkillsStyledProps = ComponentPropsWithoutRef<typeof ProjectsListStyled>;
 
 interface ProjectsListProps extends MySkillsStyledProps {
   projects: Project[];
+  projectTags: string[];
 }
 
 export const ProjectsList: React.FC<ProjectsListProps> = ({
   projects,
+  projectTags,
   ...rest
 }) => {
   const {
@@ -30,12 +32,17 @@ export const ProjectsList: React.FC<ProjectsListProps> = ({
       <ProjectsListHeaderStyled>
         <Text h3>¿Qué proyectos realicé?</Text>
         <div className="filters">
-          <Button onClick={() => filterProjects("responsive")} size="xs" auto>
-            Responsive
-          </Button>
-          <Button onClick={() => filterProjects("practice")} size="xs" auto>
-            Practices
-          </Button>
+          {projectTags.map((tag, index) => (
+            <Button
+              key={`${tag}-${index}`}
+              onClick={() => filterProjects(tag)}
+              size="xs"
+              auto
+              css={{ tt: "capitalize" }}
+            >
+              {tag}
+            </Button>
+          ))}
           <Button onClick={() => resetFilter()} size="xs" auto>
             All
           </Button>
