@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef } from "react";
 import Image from "next/image";
-import { Text, User } from "@nextui-org/react";
+import { Text, User, useTheme } from "@nextui-org/react";
 
 import { SocialLinks } from "@/components/me";
 
@@ -13,6 +13,8 @@ import { DetailsStyled, MeCardStyled, ContactDataStyled } from "./styles";
 type MeCardProps = ComponentPropsWithoutRef<typeof MeCardStyled>;
 
 export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
+  const { isDark } = useTheme()
+
   return (
     <MeCardStyled {...props}>
       <div className="container-avatar">
@@ -26,7 +28,7 @@ export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
         <User
           className="social-media-links"
           name="Christian Quispe"
-          src="/logo-transparente-blanco.png"
+          src={isDark ? "/logo-transparente-blanco.png" : "/logo-transparente.png"}
           altText="Logo de Christian Quispe"
         >
           Programador Front End

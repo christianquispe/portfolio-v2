@@ -15,7 +15,7 @@ export const MeCardStyled = styled("article", {
     position: "absolute",
     top: "$5",
     right: "$5",
-    bg: "#0f1114",
+    bg: "$accents0",
     padding: "$5",
     borderRadius: "$base",
   },

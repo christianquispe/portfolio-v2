@@ -8,7 +8,7 @@ export const CardHeaderStyled = styled(Card.Header, {
 
 export const CardFooterStyled = styled(Card.Footer, {
   position: "relative",
-  bgBlur: "#0f111488",
+  bgBlur: "$headerBackground",
   bottom: 0,
   zIndex: 1,
   display: "flex",
@@ -19,7 +19,6 @@ export const CardFooterStyled = styled(Card.Footer, {
   "@xs": {
     position: "absolute",
     flexWrap: "nowrap",
-    borderTop: "$borderWeights$light solid $gray800",
   },
   ".details": {
     flexGrow: 1,

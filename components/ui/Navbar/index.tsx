@@ -1,14 +1,10 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import NextLink from "next/link";
-import { Text, Spacer, Link } from "@nextui-org/react";
-
+import { Text, Spacer, Link, useBodyScroll } from "@nextui-org/react";
 import { useDialog } from "@/hooks";
-
-import { BurgerBtn } from "@/components/ui";
+import { BurgerBtn, ThemeToggle, Logo } from "@/components/ui";
 import { VCardModal } from "@/components/me";
-
 import { NavbarStyled, NavListWrraper } from "./styles";
 
 interface NavItem {
@@ -31,6 +27,7 @@ export const Navbar: React.FC = () => {
   const { pathname, events } = useRouter();
 
   const { open, handleClose, handleOpen } = useDialog();
+  const [_, setBodyHidden] = useBodyScroll(null, { scrollLayer: true });
 
   useEffect(() => {
     if (open) {
@@ -45,12 +42,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <NavbarStyled>
-      <Image
-        src="/logo-transparente-blanco.png"
-        alt="Icone del pokemon"
-        width={70}
-        height={70}
-      />
+      <Logo />
       <NextLink href="/" passHref>
         <Link>
           <Text
@@ -87,8 +79,19 @@ export const Navbar: React.FC = () => {
           </li>
         ))}
       </NavListWrraper>
+      <ThemeToggle css={{ ml: "$4" }} />
       <VCardModal src="/christian-vcard.svg" />
-      <BurgerBtn active={open} onClose={handleClose} onOpen={handleOpen} />
+      <BurgerBtn
+        active={open}
+        onClose={() => {
+          setBodyHidden(false);
+          handleClose();
+        }}
+        onOpen={() => {
+          setBodyHidden(true);
+          handleOpen();
+        }}
+      />
     </NavbarStyled>
   );
 };

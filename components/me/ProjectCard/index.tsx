@@ -1,4 +1,4 @@
-import { Text, Card, Col, Row, Button } from "@nextui-org/react";
+import { Text, Card, Button } from "@nextui-org/react";
 
 import { Project } from "@/interfaces";
 
@@ -23,7 +23,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </Card.Body>
         <CardFooterStyled>
           <div className="details">
-            <Text h3 color="white">
+            <Text h3>
               {project.name}
             </Text>
             <IconsStyled>{project?.stack?.join(", ")}</IconsStyled>

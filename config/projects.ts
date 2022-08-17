@@ -3,7 +3,7 @@ import { clearDuplicate, mergeProjectTags } from "@/utils/functions";
 
 export const PROJECTS_LIST: Project[] = [
   {
-    name: "React context crud",
+    name: "Todo CRUD",
     description: "Simple crud usando useContext",
     url: "https://crud-react-context.vercel.app/",
     urlCode: "https://github.com/christianquispe/crud-react-context",

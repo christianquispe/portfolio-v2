@@ -4,7 +4,7 @@ export const BurgerBtnStyled = styled("div", {
   position: "relative",
   ".line": {
     display: "block",
-    backgroundColor: "$white",
+    backgroundColor: "$foreground",
     height: "1px",
     width: "22px",
     lineHeight: "24px",

@@ -24,14 +24,15 @@ export const NavListWrraper = styled("ul", {
   gap: "$4",
   top: "88px",
   left: 0,
-  transition: ".2s ease transform, .2s ease opacity",
   "&.open": {
+    transition: ".2s ease transform, .2s ease opacity",
     transform: "translateY(0)",
     opacity: 1,
-    bgBlur: "#000000DD",
-    paddingLeft: "20px",
+    background: "$headerBackground",
+    backdropFilter: "saturate(180%) blur(10px)",
     height: "100vh",
     width: "100%",
+    padding: "$10",
   },
   "@md": {
     d: "flex",

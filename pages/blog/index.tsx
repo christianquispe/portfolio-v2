@@ -15,24 +15,18 @@ interface HomeProps {
 
 const Home: NextPageWithLayout<HomeProps> = ({ posts }) => {
   return (
-    <>
+    <MainLayout
+      metadata={{
+        title: "Blog - Christian Quispe",
+        description:
+          "Escribo este blog para que mi hermano aprenda a desarrollar",
+      }}
+    >
       <AlertInfo />
       <LenguageSection posts={posts} />
-    </>
+    </MainLayout>
   );
 };
-
-Home.getLayout = (page) => (
-  <MainLayout
-    metadata={{
-      title: "Blog - Christian Quispe",
-      description:
-        "Escribo este blog para que mi hermano aprenda a desarrollar",
-    }}
-  >
-    {page}
-  </MainLayout>
-);
 
 export const getStaticProps: GetStaticProps = async () => {
   const unorderedPosts: any[] = await getAllFilesMetadata();

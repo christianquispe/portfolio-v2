@@ -9,7 +9,14 @@ export const StitchesHeader = styled("header", {
   variants: {
     detached: {
       true: {
-        bgBlur: "#000000DD",
+        background: "$headerBackground",
+        backdropFilter: "saturate(180%) blur(10px)",
+        boxShadow: "0px 5px 20px -5px rgba(2, 1, 1, 0.1)",
+      },
+      false: {
+        backdropFilter: "none",
+        boxShadow: "none",
+        background: "transparent",
       },
     },
   },

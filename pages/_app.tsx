@@ -1,8 +1,9 @@
 import { NextPage } from "next";
 import { AppProps } from "next/app";
 import { NextUIProvider } from "@nextui-org/react";
+import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";
 
-import { darkTheme } from "@/themes";
+import { darkTheme, lightTheme } from "@/themes";
 
 import "../styles/globals.css";
 import "../styles/dracula-prism.css";
@@ -17,9 +18,18 @@ type AppPropsWithLayout = AppProps & {
 
 const MyApp: NextPage<AppPropsWithLayout> = ({ Component, pageProps }) => {
   const page: JSX.Element = (
-    <NextUIProvider theme={darkTheme}>
-      <Component {...pageProps} />
-    </NextUIProvider>
+    <NextThemesProvider
+      defaultTheme="system"
+      attribute="class"
+      value={{
+        light: lightTheme.className,
+        dark: darkTheme.className,
+      }}
+    >
+      <NextUIProvider>
+        <Component {...pageProps} />
+      </NextUIProvider>
+    </NextThemesProvider>
   );
 
   const getLayout = Component.getLayout || ((page) => page);
