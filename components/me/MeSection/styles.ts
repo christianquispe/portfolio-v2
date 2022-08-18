@@ -1,7 +1,7 @@
 import { styled } from "@nextui-org/react";
 
 export const MeSectionStyled = styled("section", {
-  py: "$10",
+  py: "$20",
   ".title": {
     ta: "center",
     marginBottom: "$10",

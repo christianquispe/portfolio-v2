@@ -40,6 +40,7 @@ export const ProjectsList: React.FC<ProjectsListProps> = ({
             <Button
               key={`${tag}-${index}`}
               onClick={() => filterProjects(tag)}
+              color="secondary"
               size="xs"
               auto
               css={{ tt: "capitalize" }}
@@ -47,7 +48,7 @@ export const ProjectsList: React.FC<ProjectsListProps> = ({
               {tag}
             </Button>
           ))}
-          <Button onClick={() => resetFilter()} size="xs" auto>
+          <Button onClick={() => resetFilter()} size="xs" color="secondary" auto>
             All
           </Button>
         </div>

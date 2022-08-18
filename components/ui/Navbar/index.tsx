@@ -20,7 +20,7 @@ export const Navbar: React.FC = () => {
   const navItems: NavItem[] = [
     {
       name: t("aboutMe"),
-      path: "/",
+      path: "/#me",
     },
     // {
     //   name: t("projects"),

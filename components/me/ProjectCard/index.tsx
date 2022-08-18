@@ -29,7 +29,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             <IconsStyled>{project?.stack?.join(", ")}</IconsStyled>
           </div>
           <div className="actions">
-            <Button color="primary" flat auto>
+            <Button color="secondary" flat auto>
               <a href={project.urlCode} target="_blank" rel="noreferrer">Code</a>
             </Button>
             <Button color="gradient" bordered auto>
