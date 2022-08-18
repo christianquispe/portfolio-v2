@@ -7,6 +7,7 @@ import {
   SiNextdotjs,
   SiJavascript,
   SiTestinglibrary,
+  SiDocker,
 } from "react-icons/si";
 import { GrGraphQl, GrNode } from "react-icons/gr";
 
@@ -68,4 +69,11 @@ export const SKILLS_LIST: Skill[] = [
     level: "medium",
     icon: <SiMongodb size={20} />,
   },
+  {
+    name: "Docker",
+    level: "low",
+    icon: <SiDocker size={20} />,
+  },
 ];
+
+export const SKILLS_LEVELS  = ["high", "medium", "low"]

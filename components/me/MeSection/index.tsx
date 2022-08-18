@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 
 import { ProjectsList, MySkills, MeCard } from "@/components/me";
 
-import { SKILLS_LIST, PROJECTS_LIST, PROJECT_TAGS } from "@/config";
+import { SKILLS_LIST, SKILLS_LEVELS, PROJECTS_LIST, PROJECT_TAGS } from "@/config";
 
 import { MeSectionStyled } from "./styles";
 
@@ -29,7 +29,7 @@ export const MeSection: React.FC = () => {
         </Text>
         <div className="wrapper-me-content">
           <MeCard className="me" />
-          <MySkills className="skills" skills={SKILLS_LIST} />
+          <MySkills className="skills" skills={SKILLS_LIST} levels={SKILLS_LEVELS} />
           <ProjectsList className="projects" projects={PROJECTS_LIST} projectTags={PROJECT_TAGS} />
         </div>
       </MeSectionStyled>

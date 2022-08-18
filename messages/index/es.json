@@ -14,7 +14,12 @@
     },
     "Skills": {
       "title": "¿Con qué tecnologías trabajo?",
-      "description": "Uso las siguientes tecnologías para trabajar"
+      "description": "Uso las siguientes tecnologías para trabajar",
+      "high": "Alto",
+      "medium": "Medio",
+      "low": "Bajo",
+      "toLearn": "Por aprender",
+      "filterLabel": "Filtrar según mi nivel de conocimiento"
     },
     "Projects": {
       "title": "¿Qué proyectos realicé?"

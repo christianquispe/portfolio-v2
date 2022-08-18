@@ -10,6 +10,14 @@ export const MySkillsStyled = styled("article", {
   height: "fit-content",
 });
 
+export const MySkillsHeaderStyled = styled("div", {
+  display: "flex",
+  justifyContent: "space-between",
+  flexWrap: "wrap",
+  gap: "$5",
+  pb: "$3",
+});
+
 export const SkillItemStyled = styled("li", {
   display: "flex",
   alignItems: "center",
