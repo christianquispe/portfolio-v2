@@ -2,7 +2,7 @@ import { styled } from "@nextui-org/react";
 
 export const WrapperStyled = styled("div", {
   position: "relative",
-  zIndex: "1",
+  zIndex: "0",
   d: "flex",
   fd: "column",
   minHeight: "100vh",
