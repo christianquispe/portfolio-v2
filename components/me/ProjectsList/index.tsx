@@ -48,7 +48,12 @@ export const ProjectsList: React.FC<ProjectsListProps> = ({
               {tag}
             </Button>
           ))}
-          <Button onClick={() => resetFilter()} size="xs" color="secondary" auto>
+          <Button
+            onClick={() => resetFilter()}
+            size="xs"
+            color="secondary"
+            auto
+          >
             All
           </Button>
         </div>

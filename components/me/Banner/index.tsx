@@ -1,5 +1,13 @@
-import { Text, Grid, Card, Row, Button, Container, Link } from "@nextui-org/react";
-import NextLink from 'next/link'
+import {
+  Text,
+  Grid,
+  Card,
+  Row,
+  Button,
+  Container,
+  Link,
+} from "@nextui-org/react";
+import NextLink from "next/link";
 import { useTranslations } from "next-intl";
 
 import { BannerStyled } from "./styles";
@@ -61,16 +69,9 @@ export const Banner: React.FC = ({}) => {
                 }}
               >
                 <Row justify="flex-end">
-                  <Button
-                  color="secondary"
-                    auto
-                    flat
-                    rounded
-                  >
+                  <Button color="secondary" auto flat rounded>
                     <NextLink href="/#me">
-                      <Link  css={{ color: "inherit" }}>
-                        ¿Quién soy?
-                      </Link>
+                      <Link css={{ color: "inherit" }}>¿Quién soy?</Link>
                     </NextLink>
                   </Button>
                 </Row>

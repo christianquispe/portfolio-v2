@@ -23,6 +23,6 @@ describe("<LenguagesSection />", () => {
       },
     ];
     render(<LenguageSection posts={fakePosts} />);
-    expect(screen.getByText(fakePosts[0].description)).toBeInTheDocument()
+    expect(screen.getByText(fakePosts[0].description)).toBeInTheDocument();
   });
 });

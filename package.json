@@ -8,7 +8,8 @@
     "start": "next start",
     "test": "jest  --watchAll",
     "test:coverage": "jest --collect-coverage",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier:fix": "prettier -w ."
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.9",
@@ -23,6 +24,7 @@
     "next-intl": "^2.7.4",
     "next-mdx-remote": "^4.0.3",
     "next-themes": "^0.2.0",
+    "prettier": "^2.7.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
@@ -38,6 +40,7 @@
     "@types/react-dom": "18.0.5",
     "eslint": "8.18.0",
     "eslint-config-next": "12.1.6",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-testing-library": "^5.5.1",
     "typescript": "4.7.4"
   }

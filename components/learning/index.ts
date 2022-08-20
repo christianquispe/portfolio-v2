@@ -1,3 +1,3 @@
-export * from './LenguagesSection'
-export * from './LenguageCard'
-export * from './AlertInfo'
+export * from "./LenguagesSection";
+export * from "./LenguageCard";
+export * from "./AlertInfo";

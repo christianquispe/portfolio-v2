@@ -24,4 +24,4 @@ export const useSkills = (initSkills: Skill[]) => {
     filterSkills,
     resetFilter,
   };
-}
+};

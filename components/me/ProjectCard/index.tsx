@@ -23,14 +23,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </Card.Body>
         <CardFooterStyled>
           <div className="details">
-            <Text h3>
-              {project.name}
-            </Text>
+            <Text h3>{project.name}</Text>
             <IconsStyled>{project?.stack?.join(", ")}</IconsStyled>
           </div>
           <div className="actions">
             <Button color="secondary" flat auto>
-              <a href={project.urlCode} target="_blank" rel="noreferrer">Code</a>
+              <a href={project.urlCode} target="_blank" rel="noreferrer">
+                Code
+              </a>
             </Button>
             <Button color="gradient" bordered auto>
               <a href={project.url} target="_blank" rel="noreferrer">

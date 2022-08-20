@@ -1,5 +1,5 @@
 import { ComponentPropsWithoutRef } from "react";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Button, Text, User, useTheme, Link } from "@nextui-org/react";
@@ -70,7 +70,11 @@ export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
           </ul>
           <SocialLinks />
         </ContactDataStyled>
-        <Link href={`/resume_${locale?.toLocaleUpperCase()}.pdf`} target="_blank" css={{ display: "block" }}>
+        <Link
+          href={`/resume_${locale?.toLocaleUpperCase()}.pdf`}
+          target="_blank"
+          css={{ display: "block" }}
+        >
           <Button
             color="secondary"
             shadow

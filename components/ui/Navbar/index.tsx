@@ -83,7 +83,7 @@ export const Navbar: React.FC = () => {
       </NextLink>
 
       <Spacer css={{ flex: 1 }} />
-      <NavListWrraper className={open ? "open" : ""}>
+      <NavListWrraper open={open}>
         {navItems.map((item) => (
           <li key={item.path}>
             <NextLink href={item.path} passHref>

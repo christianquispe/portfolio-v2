@@ -1,16 +1,16 @@
-import { IconsId } from './components';
+import { IconsId } from "./components";
 
 export interface Project {
   name: string;
   description: string;
-  img: string
-  stack: string[]
-  tags: string[]
-  url: string
-  urlCode: string
+  img: string;
+  stack: string[];
+  tags: string[];
+  url: string;
+  urlCode: string;
 }
 
-export type SkillLevel = "high" | "medium" | "low"
+export type SkillLevel = "high" | "medium" | "low";
 
 export interface Skill {
   name: string;

@@ -76,4 +76,4 @@ export const SKILLS_LIST: Skill[] = [
   },
 ];
 
-export const SKILLS_LEVELS  = ["high", "medium", "low"]
+export const SKILLS_LEVELS = ["high", "medium", "low"];
