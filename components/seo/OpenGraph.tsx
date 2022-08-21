@@ -6,7 +6,7 @@ interface OpenGraphProps {
   metadata: Metadata;
 }
 
-const siteURL = "https://christianquispe.vercel.app/logo-transparente.png";
+const siteURL = "https://christianquispe.vercel.app";
 
 export const OpenGraph: React.FC<OpenGraphProps> = ({ metadata }) => {
   const SEO = {
