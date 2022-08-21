@@ -10,6 +10,7 @@ import {
   MobileNavigation,
 } from "@/components/ui";
 import { VCardModal } from "@/components/me";
+import { NavList } from "@/components/ui";
 
 import { NavbarStyled } from "./styles";
 
@@ -46,6 +47,7 @@ export const Navbar: React.FC = () => {
       </NextLink>
 
       <Spacer css={{ flex: 1 }} />
+      <NavList opened={false} />
       <MobileNavigation opened={open} onClose={() => handleClose()} />
       <LanguageSelect css={{ ml: "$5" }} />
       <ThemeToggle css={{ ml: "$4" }} />

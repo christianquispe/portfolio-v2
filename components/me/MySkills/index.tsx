@@ -43,7 +43,6 @@ export const MySkills: React.FC<MySkillsProps> = ({
             color="secondary"
             defaultValue={levels}
             onChange={filterSkills}
-            css={{ ml: "auto" }}
           >
             {levels.map((level, index) => (
               <Checkbox key={`${level}-${index}`} value={level} size="sm">

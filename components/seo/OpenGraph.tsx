@@ -15,7 +15,7 @@ export const OpenGraph: React.FC<OpenGraphProps> = ({ metadata }) => {
       metadata.description ||
       "Hola soy Christian quispe, y este es mi portafolio personal. Aquí hallrás todo la información que necesitas sobre mi y algunos datos extra",
     slug: metadata.slug || "",
-    image: `${siteURL}${metadata.image || "/logo-transparente.png"}`,
+    image: `${siteURL}${metadata.image || "/logo-con-fondo-negro.png"}`,
     date: metadata.date || new Date().toISOString(),
   };
 

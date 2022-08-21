@@ -12,7 +12,7 @@ interface NavItem {
 
 interface NavListProps {
   opened: boolean;
-  handleLinkClick: () => void
+  handleLinkClick?: () => void
 }
 
 export const NavList: React.FC<NavListProps> = ({ opened, handleLinkClick }) => {

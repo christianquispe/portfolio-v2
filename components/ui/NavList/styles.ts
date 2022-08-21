@@ -7,7 +7,7 @@ export const NavListWrraper = styled("ul", {
   d: "flex",
   fd: "column",
   gap: "$4",
-  top: "80px",
+  top: "70px",
   left: 0,
   m: 0,
   p: 0,

@@ -5,7 +5,7 @@ export const NavbarStyled = styled("nav", {
   alignItems: "center",
   justifyContent: "space-between",
   width: "100%",
-  height: "88px",
+  height: "75px",
   ul: {
     margin: "0",
     li: {
