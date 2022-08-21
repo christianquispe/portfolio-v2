@@ -1,8 +1,7 @@
 {
   "Index": {
     "Banner": {
-      "greet": "Hola",
-      "presentation": "soy Christian"
+      "greet": "Hola,<br></br>soy Christian"
     },
     "AboutMe": {
       "title": "Sobre mi"

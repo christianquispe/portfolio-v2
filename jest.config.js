@@ -19,6 +19,7 @@ const customJestConfig = {
     "^@/test-utils": "<rootDir>/test-utils/index.ts",
     "^@/interfaces": "<rootDir>/interfaces/index.ts",
     "^@/pages(.*)$": "<rootDir>/pages/$1",
+    "^@/config": "<rootDir>/config/index.ts",
   },
   testEnvironment: "jest-environment-jsdom",
   // Esperamos cobertura de todos los archivos js, jsx, ts y tsx.

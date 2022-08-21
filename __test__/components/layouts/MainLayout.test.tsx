@@ -1,32 +1,16 @@
-import { screen, render } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 
 import { MainLayout } from "@/components/layouts";
 
-describe("<MainLayout />", () => {
-  beforeEach(() => {
-    const useRouter = jest.spyOn(require("next/router"), "useRouter");
+import { withIntl } from "@/test-utils";
 
-    // Para Mockear el hook useRouter
-    // https://stackoverflow.com/questions/69125633/mocking-nextjs-router-events-with-jest
-    useRouter.mockImplementation(() => ({
-      route: "/",
-      pathname: "/",
-      query: "/",
-      asPath: "/",
-      push: jest.fn(),
-      events: {
-        on: jest.fn(),
-        off: jest.fn(),
-      },
-      beforePopState: jest.fn(() => null),
-      prefetch: jest.fn(() => null),
-    }));
-  });
+describe("<MainLayout />", () => {
   it("render showQr button", () => {
-    render(
+    withIntl(
       <MainLayout metadata={{}}>
         <h1>Title</h1>
-      </MainLayout>
+      </MainLayout>,
+      ["layout"]
     );
     const title = screen.getByRole("heading");
     expect(title).toBeInTheDocument();

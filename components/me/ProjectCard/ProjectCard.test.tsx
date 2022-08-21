@@ -1,11 +1,18 @@
 import { render, screen } from "@testing-library/react";
 
+import { Project } from "@/interfaces";
+
 import { ProjectCard } from "./index";
 
-const mockProjects = [
+const mockProjects: Project[] = [
   {
     name: "Crud",
-    description: "Este proyecto es de prueba",
+    description: "Este proyecto",
+    tags: ["responsive", "some"],
+    img: "/algo.jpg",
+    url: "/slkfjadsklj",
+    stack: ["test", "algo"],
+    urlCode: "askfjdksaj"
   },
 ];
 
@@ -14,7 +21,7 @@ test("<ProjectCard />", () => {
   const title = screen.getByRole("heading", {
     name: "Crud",
   });
-  const description = screen.getByText(mockProjects[0].description);
+  const stack = screen.getByText(mockProjects[0].stack.join(', '));
   expect(title).toBeInTheDocument();
-  expect(description).toBeInTheDocument();
+  expect(stack).toBeInTheDocument();
 });

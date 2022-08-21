@@ -1,29 +1,22 @@
-import { render, screen } from "@testing-library/react";
-import { RouterContext } from "next/dist/shared/lib/router-context";
+import { screen } from "@testing-library/react";
 
-import { createMockRouter } from "../../../test-utils/createMockRouter";
+import { withIntl } from "@/test-utils";
 
 import { Header } from "./";
+
+function setup() {
+  withIntl(<Header />, ["layout"]);
+}
 
 // Para poder probar el comportamiento del scroll
 // las pruebas debes ejecutarse en el navagador
 // https://github.com/testing-library/react-testing-library/issues/671
 describe("<Header />", () => {
   it("should render", () => {
-    const router = createMockRouter({});
-    render(
-      <RouterContext.Provider value={router}>
-        <Header />
-      </RouterContext.Provider>
-    );
+    setup();
   });
   it("should content", () => {
-    const router = createMockRouter({});
-    render(
-      <RouterContext.Provider value={router}>
-        <Header />
-      </RouterContext.Provider>
-    );
+    setup();
     expect(screen.getByText(/christian quispe/i)).toBeInTheDocument();
     expect(screen.getByRole("banner")).toBeInTheDocument();
   });

@@ -30,8 +30,9 @@ export const Banner: React.FC = ({}) => {
                   },
                 }}
               >
-                {t("greet")},
-                <br /> {t("presentation")}
+                {t.rich("greet", {
+                  br: () => <br />,
+                })}
               </Text>
               <Text
                 h2
