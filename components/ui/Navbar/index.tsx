@@ -48,10 +48,14 @@ export const Navbar: React.FC = () => {
 
       <Spacer css={{ flex: 1 }} />
       <NavList opened={false} />
+      <Spacer x={0.2} />
       <MobileNavigation opened={open} onClose={() => handleClose()} />
-      <LanguageSelect css={{ ml: "$5" }} />
-      <ThemeToggle css={{ ml: "$4" }} />
+      <LanguageSelect />
+      <Spacer x={0.2} />
+      <ThemeToggle />
+      <Spacer x={0.2} />
       <VCardModal src="/christian-vcard.svg" />
+      <Spacer x={0.2} />
       <BurgerBtn
         active={open}
         onClose={() => {

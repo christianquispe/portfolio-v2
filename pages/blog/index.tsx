@@ -30,7 +30,7 @@ const Home: NextPageWithLayout<HomeProps> = ({ posts }) => {
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const unorderedPosts: any[] = await getAllFilesMetadata();
-  unorderedPosts.forEach((post: any, i) => {
+  unorderedPosts.forEach((post: any) => {
     const hasValidDate = validateDate(post.date);
     if (!hasValidDate) {
       throw new Error("Fecha mal escrita");

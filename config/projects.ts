@@ -38,6 +38,15 @@ export const PROJECTS_LIST: Project[] = [
     img: "/projects/portfolio.png",
     tags: ["responsive", "testing"],
   },
+  {
+    name: "Poke Nextjs App",
+    description: "Versión actual de mi portfolio",
+    url: "https://poke-nextjs-app.vercel.app/",
+    urlCode: "https://github.com/christianquispe/poke-next-app",
+    stack: ["Nextjs", "Typescript", "Nextui", "Static Generation"],
+    img: "/projects/poke-nextjs-app.png",
+    tags: ["responsive", "SSG", "practice"],
+  },
 ];
 
 // Los tags se irán creando de forma dinámica, si agrego un tag nuevo a un objeto Project, entonces se crea un nuevo tag para filtrar

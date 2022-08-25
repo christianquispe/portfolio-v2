@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import NextLink from "next/link";
 import { useTranslations } from "next-intl";
-import { Link } from "@nextui-org/react";
+import { CSS, Link } from "@nextui-org/react";
 
 import { NavListWrraper } from "./styles";
 
@@ -12,10 +12,11 @@ interface NavItem {
 
 interface NavListProps {
   opened: boolean;
+  css?: CSS;
   handleLinkClick?: () => void
 }
 
-export const NavList: React.FC<NavListProps> = ({ opened, handleLinkClick }) => {
+export const NavList: React.FC<NavListProps> = ({ opened, handleLinkClick, css }) => {
   const { pathname } = useRouter();
   const t = useTranslations("Layout.Navbar");
 
@@ -31,7 +32,7 @@ export const NavList: React.FC<NavListProps> = ({ opened, handleLinkClick }) => 
   ];
 
   return (
-    <NavListWrraper open={opened}>
+    <NavListWrraper open={opened} css={css}>
       {navItems.map((item) => (
         <li key={item.path}>
           <NextLink href={item.path} passHref>

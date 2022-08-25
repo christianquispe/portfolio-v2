@@ -13,7 +13,7 @@ export const OpenGraph: React.FC<OpenGraphProps> = ({ metadata }) => {
     title: metadata.title || "Christian Quispe",
     description:
       metadata.description ||
-      "Hola soy Christian quispe, y este es mi portafolio personal. Aquí hallrás todo la información que necesitas sobre mi y algunos datos extra",
+      "Hola soy Christian Quispe, y este es mi portafolio personal. Aquí hallarás todo la información que necesitas sobre mí y algunos datos adicionales.",
     slug: metadata.slug || "",
     image: `${siteURL}${metadata.image || "/logo-con-fondo-negro.png"}`,
     date: metadata.date || new Date().toISOString(),

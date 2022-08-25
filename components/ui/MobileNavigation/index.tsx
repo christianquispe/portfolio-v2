@@ -19,6 +19,6 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
   };
 
   return portal
-    ? createPortal(<NavList opened={opened} handleLinkClick={handleLinkClick} />, portal)
+    ? createPortal(<NavList opened={opened} handleLinkClick={handleLinkClick} css={{"@md": {d: "none"}}} />, portal)
     : null;
 };
