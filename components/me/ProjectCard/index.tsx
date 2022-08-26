@@ -1,4 +1,4 @@
-import { Text, Card, Button } from "@nextui-org/react";
+import { Text, Card, Button, Link } from "@nextui-org/react";
 
 import { Project } from "@/interfaces";
 
@@ -27,16 +27,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             <IconsStyled>{project?.stack?.join(", ")}</IconsStyled>
           </div>
           <div className="actions">
-            <Button color="secondary" flat auto>
-              <a href={project.urlCode} target="_blank" rel="noreferrer">
+            <Link href={project.urlCode} target="_blank" rel="noreferrer">
+              <Button color="secondary" flat auto>
                 Code
-              </a>
-            </Button>
-            <Button color="gradient" bordered auto>
-              <a href={project.url} target="_blank" rel="noreferrer">
+              </Button>
+            </Link>
+            <Link href={project.url} target="_blank" rel="noreferrer">
+              <Button color="gradient" bordered auto>
                 Visit
-              </a>
-            </Button>
+              </Button>
+            </Link>
           </div>
         </CardFooterStyled>
       </Card>
