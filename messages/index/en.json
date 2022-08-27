@@ -21,7 +21,11 @@
       "filterLabel": "Filter according to my level of knowledge"
     },
     "Projects": {
-      "title": "What projects did I do?"
+      "title": "What projects did I do?",
+      "Item": {
+        "visit": "Visit",
+        "code": "Code"
+      }
     }
   }
 }

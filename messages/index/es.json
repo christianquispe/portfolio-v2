@@ -21,7 +21,11 @@
       "filterLabel": "Filtrar según mi nivel de conocimiento"
     },
     "Projects": {
-      "title": "¿Qué proyectos realicé?"
+      "title": "¿Qué proyectos realicé?",
+      "Item": {
+        "visit": "Visitar",
+        "code": "Código"
+      }
     }
   }
 }

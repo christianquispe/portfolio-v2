@@ -1,4 +1,5 @@
 import { Text, Card, Button, Link } from "@nextui-org/react";
+import { useTranslations } from "next-intl";
 
 import { Project } from "@/interfaces";
 
@@ -9,6 +10,8 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const t = useTranslations("Index.Projects.Item")
+
   return (
     <article>
       <Card>
@@ -29,12 +32,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <div className="actions">
             <Link href={project.urlCode} target="_blank" rel="noreferrer">
               <Button color="secondary" flat auto>
-                Code
+                {t('code')}
               </Button>
             </Link>
             <Link href={project.url} target="_blank" rel="noreferrer">
               <Button color="gradient" bordered auto>
-                Visit
+                {t('visit')}
               </Button>
             </Link>
           </div>
