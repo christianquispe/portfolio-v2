@@ -1,14 +1,14 @@
 {
   "Index": {
     "Banner": {
-      "greet": "Hi,<br></br>I'am Christian"
+      "greet": "Hi,<br></br>I'm Christian"
     },
     "AboutMe": {
       "title": "About me"
     },
     "MeCard": {
-      "title": "who I am?",
-      "description": "I am a Front-end developer with a passion for creating beautiful and functional web applications. I have a strong background in web development and have worked with a variety of technologies, including HTML, CSS, JavaScript, Typescript, React, Nextjs and Graphql.",
+      "title": "Who I am?",
+      "description": "I'm a Front-end developer with a passion for creating beautiful and functional web applications. I have a strong background in web development and have worked with a variety of technologies, including HTML, CSS, JavaScript, Typescript, React, Nextjs and Graphql.",
       "seeResume": "See resume"
     },
     "Skills": {
