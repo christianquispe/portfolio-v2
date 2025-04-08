@@ -25,10 +25,6 @@ export const NavList: React.FC<NavListProps> = ({ opened, handleLinkClick, css }
       name: t("aboutMe"),
       path: "/#me",
     },
-    {
-      name: t("blog"),
-      path: "/blog",
-    },
   ];
 
   return (

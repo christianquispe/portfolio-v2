@@ -18,6 +18,7 @@ export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
   const { isDark } = useTheme();
   const { locale } = useRouter();
   const t = useTranslations("Index.MeCard");
+  const sharedT = useTranslations("Shared");
 
   return (
     <MeCardStyled {...props}>
@@ -37,11 +38,11 @@ export const MeCard: React.FC<MeCardProps> = ({ ...props }) => {
           }
           altText="Logo de Christian Quispe"
         >
-          Programador Front End
+          {sharedT("position")}
         </User>
       </div>
       <DetailsStyled>
-        <Text h3>¿Quién soy?</Text>
+        <Text h3>{t("title")}</Text>
         <div>
           <Text>{t("description")}</Text>
         </div>

@@ -26,6 +26,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
       messages: {
         ...require(`../messages/layout/${locale}.json`),
         ...require(`../messages/index/${locale}.json`),
+        ...require(`../messages/shared/${locale}.json`),
       },
     },
   };

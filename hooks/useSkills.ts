@@ -4,11 +4,16 @@ import { Skill } from "@/interfaces";
 
 export const useSkills = (initSkills: Skill[]) => {
   const [skills, setSkills] = useState<Skill[]>([]);
+  const [allSkills, setAllSkills] = useState<Skill[]>([]);
 
   const filterSkills = (levelsSelected: string[]) => {
-    setSkills([
-      ...initSkills.filter((skill) => levelsSelected.includes(skill.level)),
-    ]);
+    if (!levelsSelected.length) {
+      setSkills(allSkills);
+    } else {
+      setSkills([
+        ...initSkills.filter((skill) => levelsSelected.includes(skill.level)),
+      ]);
+    }
   };
 
   const resetFilter = () => {
@@ -16,6 +21,7 @@ export const useSkills = (initSkills: Skill[]) => {
   };
 
   useEffect(() => {
+    if (!allSkills.length) setAllSkills(initSkills);
     setSkills(initSkills);
   }, [initSkills]);
 
